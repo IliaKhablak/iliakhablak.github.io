@@ -10,11 +10,11 @@
         type="text/javascript"></script>
     <script src="index.js" defer></script>
     <title>Document</title>
-    <!-- <style>
-            @view-transition {
-                navigation: auto;
-            }
-        </style> -->
+    <style>
+        @view-transition {
+            navigation: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,27 +49,27 @@
             <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ FIRST BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
             <div
-                class="rounded-[50px] uppercase flex items-center justify-start text-font1 py-[115px] px-[105px]  relative">
-                <div
-                    class="rounded-[50px] absolute top-0 left-0 bg-gym1 size-full z-10  bg-[size:100%] bg-[position:0_-330px] opacity-70">
+                class="rounded-[50px] uppercase flex items-center justify-center lg:justify-start text-font1 py-[115px] px-[105px]  relative">
+                <div class="rounded-[50px] absolute top-0 left-0 bg-gym1 size-full z-10  bg-center bg-cover opacity-70">
                 </div>
                 <div class=" rounded-[50px] absolute top-0 left-0 bg-black/60 size-full z-20"></div>
-                <h1 class="font-bold text50 z-30">наши <br> <span class="text-font2">контакты</span></h1>
+                <h1 class="font-bold text28 lg:text50 z-20 max-lg:text-center">наши <br> <span
+                        class="text-font2">контакты</span></h1>
             </div>
 
             <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ SECOND BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-            <div class="py-20 flex gap-[10px] justify-center uppercase font-bold text-dark">
+            <div class="py-20 flex flex-wrap gap-[10px] justify-center uppercase font-bold text-dark">
                 <div class="contactsCard active group/main">
-                    <h1 class="text40 mb-5">клуб <br>
+                    <h1 class="text20 lg:text40 mb-5">клуб <br>
                         <span class="text-cardBg">НА ЛЕНИНА, 30</span>
                     </h1>
                     <div class="h-[1px] w-full bg-cardBg mb-[30px]"></div>
-                    <h1 class="text30 mb-5">время работы</h1>
+                    <h1 class="text18  lg:text30 mb-5">время работы</h1>
                     <p class="text19 font-play ">Пн-Пт: с 07:00 до 23:00</p>
                     <p class="text19 font-play mb-[30px]">Сб-Вс: с 08:00 до 22:00</p>
                     <div class="h-[1px] w-full bg-cardBg mb-[30px]"></div>
-                    <a href="tel:8(938)4111333" class="text30 text-cardBg ">8 (938) 411 13 33</a>
+                    <a href="tel:8(938)4111333" class="text18 lg:text30 text-cardBg ">8 (938) 411 13 33</a>
                     <div class="flex gap-3 mb-5 mt-[30px] cursor-pointer">
                         <svg class="group" width="38" height="38" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -99,15 +99,15 @@
                     </div>
                 </div>
                 <div class="contactsCard  group/main">
-                    <h1 class="text40 mb-5">клуб <br>
+                    <h1 class="text20 lg:text40 mb-5">клуб <br>
                         <span class="text-cardBg">НА ЛЕСЕЛИДЗЕ, 7</span>
                     </h1>
                     <div class="h-[1px] w-full bg-cardBg mb-[30px]"></div>
-                    <h1 class="text30 mb-5">время работы</h1>
+                    <h1 class="text18 lg:text30 mb-5">время работы</h1>
                     <p class="text19 font-play ">Ежедневно: </p>
                     <p class="text19 font-play mb-[30px]">с 08:00 до 22:00</p>
                     <div class="h-[1px] w-full bg-cardBg mb-[30px]"></div>
-                    <a href="tel:8(938)5227733" class="text30 text-cardBg ">8 (938) 522 77 33</a>
+                    <a href="tel:8(938)5227733" class="text18 lg:text30 text-cardBg ">8 (938) 522 77 33</a>
                     <div class="flex gap-3 mb-5 mt-[30px] cursor-pointer">
                         <svg class="group" width="38" height="38" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -278,28 +278,29 @@
     </svg>
 
     <div class="modal close" id="modal" onclick="openModal('close', arguments[0])">
-        <div class="content relative bg-extraLight size-fit p-[10px] pb-[34px] rounded-[50px] uppercase">
-            <button class="close absolute top-[30px] right-[30px] bg-crossBg size-5 bg-cover bg-center z-30">
+        <div class="content">
+            <button class="close cross">
             </button>
-            <div
-                class="image w-[660px] h-[344px] bg-mainBasicsGym2 bg-[size:120%] bg-[position:0px_-100px] rounded-[42px] mb-10 p-[28px] flex items-end justify-center relative">
-                <div class="absolute top-0 left-0 size-full bg-gradientCoverReverse rounded-[42px] z-10"></div>
-                <h1 class="font-bold text-white text40 text-center z-20">начни свой <br> путь к лучшей <br> версии себя!
+            <div class="image">
+                <div class="imageInner ">
+                </div>
+                <h1 class="imageText ">начни свой <br> путь
+                    к лучшей <br>
+                    версии себя!
                 </h1>
             </div>
-            <h1 class="font-bold text30 text-dark text-center mb-5">ПОЛУЧИТЬ ПРОБНОЕ <br> ЗАНЯТИЕ</h1>
+            <h1 class="mainText">ПОЛУЧИТЬ ПРОБНОЕ <br> ЗАНЯТИЕ
+            </h1>
             <div class="flex flex-col items-center">
-                <form action="" class="flex flex-col lg:w-[460px] relative mb-5">
-                    <input type="text" placeholder="ВАШЕ ИМЯ"
-                        class="rounded-[50px] py-[10px] px-10 mb-[20px] w-full h-20 !text-dark font-bold text18 bg-light outline-none placeholder:!text-dark placeholder:font-bold placeholder:text18" />
-                    <input type="text" placeholder="НОМЕР ТЕЛЕФОНА"
-                        class="rounded-[50px] py-[10px] px-10 mb-[20px] w-full h-20 !text-dark font-bold text18 bg-light outline-none placeholder:!text-dark placeholder:font-bold placeholder:text18" />
+                <form action="">
+                    <input type="text" placeholder="ВАШЕ ИМЯ" />
+                    <input type="text" placeholder="НОМЕР ТЕЛЕФОНА" />
                     <button
-                        class="pillBtn border-2 border-dark bg-dark transition duration-300 hover:bg-extraLight hover:text-dark bordered font-bold text-mainBg text18 h-20 !w-full">
+                        class="pillBtn border-2 border-dark bg-dark transition duration-300 hover:bg-extraLight hover:text-dark font-bold text-mainBg text16 md:text18 h-20 !w-full">
                         отправить сообщение
                     </button>
                 </form>
-                <p class="lg:w-[460px] text13 text-dark text-center leading-[14px] font-play">Нажимая кнопку
+                <p class="legalText">Нажимая кнопку
                     «ОТПРАВИТЬ», вы
                     даете свое
                     согласие

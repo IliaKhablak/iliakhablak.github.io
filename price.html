@@ -10,11 +10,11 @@
         type="text/javascript"></script>
     <script src="index.js" defer></script>
     <title>Document</title>
-    <!-- <style>
-            @view-transition {
-                navigation: auto;
-            }
-        </style> -->
+    <style>
+        @view-transition {
+            navigation: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,26 +49,27 @@
             <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ FIRST BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
             <div
-                class="rounded-[50px] uppercase flex max-lg:flex-col items-center justify-between bg-dark text-font1 p-[10px] ">
-                <div class="flex flex-col items-center justify-center gap-[50px] grow">
-                    <h1 class="font-bold text50">цены <br> <span class="text-font2">на услуги</span></h1>
+                class="rounded-[50px] uppercase flex  max-lg:flex-col items-center justify-between bg-dark text-font1 p-[10px] ">
+                <div class="flex flex-col items-center justify-center gap-[30px] lg:gap-[50px] grow p-5">
+                    <h1 class="font-bold text28 lg:text50">цены <br> <span class="text-font2">на услуги</span></h1>
                     <button onClick="openModal('open', arguments[0]);"
-                        class="transition duration-300 pillBtn bg-font2 text-dark border-2 border-font2 hover:bg-dark hover:text-font2 text18 font-bold">Получить
+                        class="transition duration-300 pillBtn bg-font2 text-dark border-2 border-font2 hover:bg-dark hover:text-font2 text16 lg:text18 font-bold">Получить
                         предложение</button>
                 </div>
-                <div class="w-[655px] h-[440px] rounded-[42px] bg-priceBg1 bg-[size:105%] bg-[position:center]"></div>
+                <div class="w-full lg:w-[655px] h-[330px] lg:h-[440px] rounded-[42px] bg-priceBg1 bg-center bg-cover">
+                </div>
             </div>
 
             <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ SECOND BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
             <div class="py-20 text-dark uppercase font-bold text-center">
-                <h1 class="mb-[60px] text50">стоимость занятий <br>
+                <h1 class="mb-[60px] text28 lg:text50">стоимость занятий <br>
                     <span class="text-cardBg">НА ЛЕНИНА</span>
                 </h1>
                 <a href="#" class="pillBtn border-2 border-font2 transition duration-300 hover:bg-font2">смотреть на
                     леселидзе</a>
-                <div class="felx items-center justify-center px-[105px] mt-[70px]">
-                    <img src="./assets/price.jpeg" alt="price" class="rounded-[50px]">
+                <div class="felx items-center justify-center max-lg:w-screen max-lg:-ml-[15px] lg:px-[105px] mt-[70px]">
+                    <img src="./assets/price.jpeg" alt="price" class="lg:rounded-[50px]">
                 </div>
             </div>
 
@@ -200,28 +201,29 @@
             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
     <div class="modal close" id="modal" onclick="openModal('close', arguments[0])">
-        <div class="content relative bg-extraLight size-fit p-[10px] pb-[34px] rounded-[50px] uppercase">
-            <button class="close absolute top-[30px] right-[30px] bg-crossBg size-5 bg-cover bg-center z-30">
+        <div class="content">
+            <button class="close cross">
             </button>
-            <div
-                class="image w-[660px] h-[344px] bg-mainBasicsGym2 bg-[size:120%] bg-[position:0px_-100px] rounded-[42px] mb-10 p-[28px] flex items-end justify-center relative">
-                <div class="absolute top-0 left-0 size-full bg-gradientCoverReverse rounded-[42px] z-10"></div>
-                <h1 class="font-bold text-white text40 text-center z-20">начни свой <br> путь к лучшей <br> версии себя!
+            <div class="image">
+                <div class="imageInner ">
+                </div>
+                <h1 class="imageText ">начни свой <br> путь
+                    к лучшей <br>
+                    версии себя!
                 </h1>
             </div>
-            <h1 class="font-bold text30 text-dark text-center mb-5">ПОЛУЧИТЬ ПРОБНОЕ <br> ЗАНЯТИЕ</h1>
+            <h1 class="mainText">ПОЛУЧИТЬ ПРОБНОЕ <br> ЗАНЯТИЕ
+            </h1>
             <div class="flex flex-col items-center">
-                <form action="" class="flex flex-col lg:w-[460px] relative mb-5">
-                    <input type="text" placeholder="ВАШЕ ИМЯ"
-                        class="rounded-[50px] py-[10px] px-10 mb-[20px] w-full h-20 !text-dark font-bold text18 bg-light outline-none placeholder:!text-dark placeholder:font-bold placeholder:text18" />
-                    <input type="text" placeholder="НОМЕР ТЕЛЕФОНА"
-                        class="rounded-[50px] py-[10px] px-10 mb-[20px] w-full h-20 !text-dark font-bold text18 bg-light outline-none placeholder:!text-dark placeholder:font-bold placeholder:text18" />
+                <form action="">
+                    <input type="text" placeholder="ВАШЕ ИМЯ" />
+                    <input type="text" placeholder="НОМЕР ТЕЛЕФОНА" />
                     <button
-                        class="pillBtn border-2 border-dark bg-dark transition duration-300 hover:bg-extraLight hover:text-dark bordered font-bold text-mainBg text18 h-20 !w-full">
+                        class="pillBtn border-2 border-dark bg-dark transition duration-300 hover:bg-extraLight hover:text-dark font-bold text-mainBg text16 md:text18 h-20 !w-full">
                         отправить сообщение
                     </button>
                 </form>
-                <p class="lg:w-[460px] text13 text-dark text-center leading-[14px] font-play">Нажимая кнопку
+                <p class="legalText">Нажимая кнопку
                     «ОТПРАВИТЬ», вы
                     даете свое
                     согласие

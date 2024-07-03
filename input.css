@@ -102,7 +102,7 @@ footer {
 }
 
 .pillBtn {
-  @apply py-[35px] px-[32px] rounded-[50px] uppercase w-fit;
+  @apply py-[30px] px-[30px] rounded-[50px] uppercase w-fit max-md:font-play;
 }
 
 .cross {
@@ -367,7 +367,7 @@ footer {
     @apply max-xl:order-3 max-xl:col-span-1 max-xl:justify-self-start;
   }
   & .carousel {
-    @apply w-[900px] h-[600px] relative max-xl:order-1 max-xl:col-span-2 max-xl:justify-self-center;
+    @apply w-full lg:w-[900px] h-[330px] lg:h-[600px] relative max-xl:order-1 max-xl:col-span-2 max-xl:justify-self-center;
     & .dots {
       @apply absolute bottom-4 left-1/2 -translate-x-1/2  flex gap-2;
     }
@@ -378,7 +378,7 @@ footer {
       }
     }
     & .image {
-      @apply transition duration-300 absolute top-0 left-0 opacity-0 w-[900px] h-[600px] bg-cover bg-center rounded-[42px];
+      @apply transition duration-300 absolute top-0 left-0 opacity-0 w-full lg:w-[900px] h-[330px] lg:h-[600px] bg-cover bg-center lg:rounded-[42px];
       &.active {
         @apply transition duration-300 opacity-100;
       }
@@ -427,9 +427,9 @@ input::placeholder {
     }
   }
   & .carousel {
-    @apply overflow-hidden rounded-[42px] size-[670px] relative;
+    @apply overflow-hidden rounded-[42px] w-full h-[310px] md:h-[670px] relative;
     & .carouselItem {
-      @apply transition-opacity duration-300 w-full h-full opacity-0 absolute  bg-no-repeat;
+      @apply transition-opacity duration-300 w-full h-full opacity-0 absolute  bg-no-repeat bg-cover bg-center;
       &.active {
         @apply transition-opacity duration-300 opacity-100;
       }
@@ -451,15 +451,15 @@ input::placeholder {
 }
 
 .selectBtn {
-  @apply transition-[height,background] duration-300 uppercase h-[60px] rounded-[30px] py-[25px] px-8 border-2 border-font2 text-dark relative hover:bg-font2 cursor-pointer;
+  @apply transition-[height,background] duration-300 uppercase h-[60px] rounded-[30px] p-[20px] px-8 border-2 border-font2 text-dark relative hover:bg-font2 cursor-pointer;
   & .options {
     @apply transition duration-300 text12 opacity-0  absolute z-20 flex flex-col;
     & .option {
-      @apply transition duration-300 rounded-[5px] hover:scale-105 py-1 text-left uppercase;
+      @apply transition duration-300 rounded-[5px] hover:scale-105 py-2 md:py-1 text-left uppercase;
     }
   }
   &.active {
-    @apply transition-height duration-300 h-[150px];
+    @apply transition-height duration-300 h-[160px] md:h-[150px];
     & svg {
       @apply transition duration-300 rotate-180;
     }
@@ -471,13 +471,40 @@ input::placeholder {
 
 .modal {
   @apply w-0 h-0 fixed top-0 left-0 z-50 backdrop-blur-sm bg-black/50 flex overflow-hidden items-center justify-center transition duration-300 opacity-0 pointer-events-none;
+  & .content {
+    @apply relative bg-extraLight size-full md:size-fit p-[10px] pb-[34px] md:rounded-[50px] uppercase;
+    & .mainText {
+      @apply font-bold text20 md:text30 text-dark text-center mb-5;
+    }
+    & .legalText {
+      @apply md:w-[460px] text13 text-dark text-center leading-[14px] font-play;
+    }
+    & form {
+      @apply flex flex-col md:w-[460px] relative mb-[10px] lg:mb-5;
+      & input {
+        @apply rounded-[50px] py-[10px] px-10 mb-[10px] lg:mb-[20px] w-full h-20 !text-dark font-bold text16 md:text18 bg-light outline-none placeholder:!text-dark placeholder:font-bold placeholder:text16 placeholder:md:text18;
+      }
+    }
+    & .image {
+      @apply md:w-[660px] h-[344px] bg-mainBasicsGym2 bg-cover bg-center rounded-[42px] mb-10 p-[28px] flex items-end justify-center relative;
+      & .imageInner {
+        @apply absolute top-0 left-0 size-full bg-gradientCoverReverse rounded-[42px] z-10;
+      }
+      & .imageText {
+        @apply font-bold text-white text20 md:text40 text-center z-20;
+      }
+    }
+    & .cross {
+      @apply absolute top-[30px] right-[30px] bg-crossBg size-5 bg-cover bg-center z-30;
+    }
+  }
   &.active {
     @apply transition duration-300 opacity-100 pointer-events-auto;
   }
 }
 
 .contactsCard {
-  @apply w-[575px] h-[500px] rounded-[50px] border-2 border-font2 pt-[60px] px-[37px];
+  @apply w-full lg:w-[575px] h-fit lg:h-[500px] rounded-[50px] border-2 border-font2 pt-[60px] pb-5 px-[37px];
   &.active {
     @apply border-none bg-light;
   }

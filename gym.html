@@ -9,11 +9,11 @@
         type="text/javascript"></script>
     <script src="index.js" defer></script>
     <title>Document</title>
-    <!-- <style>
-            @view-transition {
-                navigation: auto;
-            }
-        </style> -->
+    <style>
+        @view-transition {
+            navigation: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,70 +49,73 @@
             <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ FIRST BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
             <div
-                class="rounded-[50px] flex flex-wrap items-center justify-center p-[10px] gap-[10px] bg-directionsColor1">
+                class="rounded-[50px] flex flex-wrap items-center justify-center p-[10px] gap-[30px] lg:gap-[10px] bg-directionsColor1">
                 <div
-                    class="w-[680px] h-[660px] flex flex-col gap-[90px] justify-center items-center text-dark uppercase text-center">
-                    <div class="w-[565px] relative pt-[60px]">
+                    class="basis-[500px] grow max-w-1/2 lg:h-[660px] shrink flex flex-col lg:gap-[90px] lg:justify-center items-center text-dark uppercase text-center max-lg:mt-10">
+                    <div class="lg:w-[565px] relative lg:pt-[60px]">
                         <img src="./assets/icons/logo.svg" class="opacity-10 absolute top-0 left-0 w-full" alt="logo">
                         <p class="font-bold text16 mb-[30px]">наши направления:</p>
-                        <h1 class="font-bold text50 mb-[50px]">ТРЕНАЖЁРНЫЙ ЗАЛ</h1>
-                        <p class="font-bold text20 mb-[90px]">ДВА ПРОСТОРНЫХ ЗАЛА С ТРЕНАЖЁРАМИ И СВОБОДНЫМИ ВЕСАМИ</p>
+                        <h1 class="font-bold text28 lg:text50 mb-[50px]">ТРЕНАЖЁРНЫЙ ЗАЛ</h1>
+                        <p class="font-bold text16 lg:text20 mb-[90px]">ДВА ПРОСТОРНЫХ ЗАЛА С ТРЕНАЖЁРАМИ И СВОБОДНЫМИ
+                            ВЕСАМИ</p>
                     </div>
                     <button onClick="openModal('open', arguments[0]);"
-                        class="transition duration-300 pillBtn bg-dark text-font2 border border-dark hover:bg-directionsColor1 hover:text-dark text18 font-bold whitespace-nowrap">
+                        class="transition duration-300 pillBtn bg-dark text-font2 border border-dark hover:bg-directionsColor1 hover:text-dark text16 lg:text18 font-bold whitespace-nowrap h-20">
                         начать тренироваться
                     </button>
                 </div>
                 <div
-                    class="size-[660px] rounded-[42px] bg-directionsBg1 bg-[size:140%] bg-[position:-120px_0px] bg-no-repeat">
+                    class="basis-[500px] grow max-w-1/2 h-[330px] md:h-[660px] rounded-[42px] bg-directionsBg1 bg-cover bg-center bg-no-repeat">
                 </div>
             </div>
 
             <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ SECOND BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-            <div class="pt-[108px]">
-                <h1 class="font-bold text50 text-dark text-center mb-10">Тренажёрный <br>
+            <div class="pt-20 lg:pt-[108px]">
+                <h1 class="font-bold text28 lg:text50 text-dark text-center mb-10">Тренажёрный <br>
                     <span class="text-cardBg">зал</span>
                 </h1>
-                <div class="h-[690px] p-[10px] flex bg-dark rounded-[50px] text-font1 mb-[139px]">
-                    <div class="carouselSingleContainer w-1/2" id="carouselMainLeselidze">
+                <div
+                    class="p-[10px] flex flex-wrap justify-center xl:justify-between items-center gap-[30px] max-xl:pb-10 lg:gap-[50px] bg-dark rounded-[50px] text-font1">
+                    <div class="carouselSingleContainer w-full xl:w-1/2  shrink-0" id="carouselMainLeselidze">
                         <div class="carousel">
-                            <div class="carouselItem bg-mainBasicsGym1 active bg-[position:-200px_0] bg-[size:150%]">
+                            <div class="carouselItem bg-mainBasicsGym1 active ">
                             </div>
-                            <div class="carouselItem bg-mainBasicsGym2 bg-[size:150%]"></div>
-                            <div class="carouselItem bg-mainBasicsGym3 bg-[size:150%] bg-[position:-200px_0]"></div>
-                            <div class="carouselItem bg-mainBasicsGym4 bg-[position:-20px_-100px]"></div>
+                            <div class="carouselItem bg-mainBasicsGym2 "></div>
+                            <div class="carouselItem bg-mainBasicsGym3 "></div>
+                            <div class="carouselItem bg-mainBasicsGym4 "></div>
                         </div>
                     </div>
-                    <div class="w-1/2 flex items-center justify-center pr-[105px] pl-[70px]">
-                        <ul class="list-disc text20 font-bold font-play ml-[15px] flex flex-col gap-5 uppercase">
-                            <li>
-                                Большой тренажерный зал площадью более 500 м² с профессиональным оборудованием
-                                премиум-класса от мировых производителей: GYM 80, Technogym, Legend Fitness и др.
-                            </li>
-                            <li>Зал с огромным грузоблочного оборудования и кроссфит-рамой</li>
-                            <li>
-                                Отдельный зал свободных весов с большим гантельным рядом
-                            </li>
-                            <li>Зона функционального тренинга</li>
-                            <li>Отдельный зал для пауэрлифтинга</li>
-                            <li>
-                                Зона растяжки
-                            </li>
-                            <li>
-                                Все помещения тренажерного зала с высокими потолками, отличной вентиляцией, большим
-                                количеством зеркал, хорошим освещением и кулером с питьевой водой
-                            </li>
-                            <li>В зале работает дежурный тренер, который подскажет и поможет</li>
-                        </ul>
-                    </div>
+
+                    <ul
+                        class="list-disc text16 lg:text20 font-bold font-play ml-[15px] flex flex-col shrink max-w-[500px] gap-5 uppercase max-md:px-[30px] xl:pr-[70px]">
+                        <li>
+                            Большой тренажерный зал площадью более 500 м² с профессиональным оборудованием
+                            премиум-класса от мировых производителей: GYM 80, Technogym, Legend Fitness и др.
+                        </li>
+                        <li>Зал с огромным грузоблочного оборудования и кроссфит-рамой</li>
+                        <li>
+                            Отдельный зал свободных весов с большим гантельным рядом
+                        </li>
+                        <li>Зона функционального тренинга</li>
+                        <li>Отдельный зал для пауэрлифтинга</li>
+                        <li>
+                            Зона растяжки
+                        </li>
+                        <li>
+                            Все помещения тренажерного зала с высокими потолками, отличной вентиляцией, большим
+                            количеством зеркал, хорошим освещением и кулером с питьевой водой
+                        </li>
+                        <li>В зале работает дежурный тренер, который подскажет и поможет</li>
+                    </ul>
+
                 </div>
             </div>
 
             <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ THIRD BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-            <div class="pt-[132px] pb-20">
-                <h1 class="font-bold text50 text-dark text-center mb-10">Тренерский <br>
+            <div class="pt-20 lg:pt-[132px] pb-20">
+                <h1 class="font-bold  text28 lg:text50 text-dark text-center mb-10">Тренерский <br>
                     <span class="text-cardBg">состав</span>
                 </h1>
                 <div class="flex flex-wrap gap-x-[10px] gap-y-5 justify-center" id="addTrainers">
@@ -275,28 +278,29 @@
             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
     <div class="modal close" id="modal" onclick="openModal('close', arguments[0])">
-        <div class="content relative bg-extraLight size-fit p-[10px] pb-[34px] rounded-[50px] uppercase">
-            <button class="close absolute top-[30px] right-[30px] bg-crossBg size-5 bg-cover bg-center z-30">
+        <div class="content">
+            <button class="close cross">
             </button>
-            <div
-                class="image w-[660px] h-[344px] bg-mainBasicsGym2 bg-[size:120%] bg-[position:0px_-100px] rounded-[42px] mb-10 p-[28px] flex items-end justify-center relative">
-                <div class="absolute top-0 left-0 size-full bg-gradientCoverReverse rounded-[42px] z-10"></div>
-                <h1 class="font-bold text-white text40 text-center z-20">начни свой <br> путь к лучшей <br> версии себя!
+            <div class="image">
+                <div class="imageInner ">
+                </div>
+                <h1 class="imageText ">начни свой <br> путь
+                    к лучшей <br>
+                    версии себя!
                 </h1>
             </div>
-            <h1 class="font-bold text30 text-dark text-center mb-5">ПОЛУЧИТЬ ПРОБНОЕ <br> ЗАНЯТИЕ</h1>
+            <h1 class="mainText">ПОЛУЧИТЬ ПРОБНОЕ <br> ЗАНЯТИЕ
+            </h1>
             <div class="flex flex-col items-center">
-                <form action="" class="flex flex-col lg:w-[460px] relative mb-5">
-                    <input type="text" placeholder="ВАШЕ ИМЯ"
-                        class="rounded-[50px] py-[10px] px-10 mb-[20px] w-full h-20 !text-dark font-bold text18 bg-light outline-none placeholder:!text-dark placeholder:font-bold placeholder:text18" />
-                    <input type="text" placeholder="НОМЕР ТЕЛЕФОНА"
-                        class="rounded-[50px] py-[10px] px-10 mb-[20px] w-full h-20 !text-dark font-bold text18 bg-light outline-none placeholder:!text-dark placeholder:font-bold placeholder:text18" />
+                <form action="">
+                    <input type="text" placeholder="ВАШЕ ИМЯ" />
+                    <input type="text" placeholder="НОМЕР ТЕЛЕФОНА" />
                     <button
-                        class="pillBtn border-2 border-dark bg-dark transition duration-300 hover:bg-extraLight hover:text-dark bordered font-bold text-mainBg text18 h-20 !w-full">
+                        class="pillBtn border-2 border-dark bg-dark transition duration-300 hover:bg-extraLight hover:text-dark font-bold text-mainBg text16 md:text18 h-20 !w-full">
                         отправить сообщение
                     </button>
                 </form>
-                <p class="lg:w-[460px] text13 text-dark text-center leading-[14px] font-play">Нажимая кнопку
+                <p class="legalText">Нажимая кнопку
                     «ОТПРАВИТЬ», вы
                     даете свое
                     согласие

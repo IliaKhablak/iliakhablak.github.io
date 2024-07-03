@@ -14,9 +14,9 @@ function carousel(id) {
     if (x0 || x0 === 0) {
       let dx = unify(e).clientX - x0,
         s = Math.sign(dx);
-      if (s > 0) {
+      if (s === 1) {
         prevMove();
-      } else {
+      } else if (s === -1) {
         nextMove();
       }
       x0 = null;
@@ -122,9 +122,9 @@ function carouselSingle(id, timer = false) {
     if (x0 || x0 === 0) {
       let dx = unify(e).clientX - x0,
         s = Math.sign(dx);
-      if (s > 0) {
+      if (s === 1) {
         prevMove();
-      } else {
+      } else if (s === -1) {
         nextMove();
       }
       x0 = null;
@@ -218,9 +218,9 @@ function carouselSingleArrows(id, timer = false) {
     if (x0 || x0 === 0) {
       let dx = unify(e).clientX - x0,
         s = Math.sign(dx);
-      if (s === -1) {
+      if (s === 1) {
         prevMove();
-      } else if (s === 1) {
+      } else if (s === -1) {
         nextMove();
       }
       x0 = null;
@@ -464,7 +464,7 @@ function openModal(state, event) {
 
 document.addEventListener("DOMContentLoaded", function (event) {
   carousel("mainCarousel");
-  carouselSingle("carouselMainLeselidze", 5000);
+  carouselSingle("carouselMainLeselidze");
   carouselSingleArrows("carouselSingleArrowsGallery", 5000);
   ymaps.ready(() => initMap("mapLenina"));
   ymaps.ready(() => initMap("mapLeselidze"));
