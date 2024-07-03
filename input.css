@@ -1,0 +1,484 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Eurofontextendedc";
+  src: url("./assets/eurofontextendedc.otf");
+}
+
+@font-face {
+  font-family: "Eurofontextendedc";
+  src: url("./assets/eurofontextendedc_bold.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Play";
+  src: url("./assets/Play-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Play";
+  src: url("./assets/Play-Bold.ttf");
+  font-weight: bold;
+}
+
+@layer base {
+  :root {
+    --mainBg: 208, 199, 184; /* #D0C7B8 */
+    --lightBg: 217, 217, 217; /* ##D9D9D9 */
+    --dark: 46, 46, 45; /* #2E2E2D */
+    --font1: 188, 183, 181; /* #BCB7B5 */
+    --font2: 162, 160, 115; /* #a2a073 */
+    --cardBg: 87, 92, 74; /* #575C4A */
+    --light: 222, 221, 220; /* #DEDDDC */
+    --extraLight: 241, 241, 241; /* #F1F1F1 */
+    --iconBg: 203, 200, 199; /* #cbc8c7 */
+    --personCardBg: 241, 241, 241; /* #F1F1F1 */
+    --personalCardInnerBg: 188, 188, 187; /* #BCBCBB */
+    --cardW: 380px;
+    --directionsColor1: 136, 123, 108; /* #887B6C */
+  }
+}
+
+body {
+  @apply bg-mainBgImg font-euro;
+}
+
+main {
+  @apply max-w-[1400px] mx-auto p-[15px] lg:py-[25px] flex flex-col gap-[15px] lg:gap-[25px];
+}
+
+nav {
+  @apply h-10;
+  & .links {
+    @apply uppercase font-play font-bold lg:text14 z-30 max-lg:h-[0vh] max-lg:top-0 max-lg:left-0 max-lg:flex-col max-lg:items-end max-lg:justify-end max-lg:text20 max-lg:absolute max-lg:w-full max-lg:bg-mainBg max-lg:overflow-hidden flex lg:items-center gap-6;
+    transition: height 0.5s ease-in-out;
+    height: 0;
+    &.active {
+      @apply fixed h-[100vh] bg-mainBg z-30 w-full top-0 left-0 flex-col items-end justify-start py-20 px-3 text20;
+      transition: height 0.5s ease-in-out;
+      height: 100vh;
+      & a {
+        @apply opacity-100;
+      }
+    }
+    & a {
+      @apply transition-all duration-300 text-dark max-lg:opacity-0;
+      &:hover {
+        @apply transition-all duration-300 text-font2;
+      }
+      &.active {
+        @apply transition-all duration-300 text-font2;
+      }
+    }
+  }
+}
+
+footer {
+  @apply p-[35px]  pt-[60px] lg:p-[60px] bg-dark rounded-[50px] font-play text-font1 text14 lg:text16 uppercase relative;
+  & .icon {
+    @apply cursor-pointer;
+    & path {
+      @apply transition-all duration-300 fill-font1;
+    }
+    &:hover path {
+      @apply transition-all duration-300 fill-font2;
+    }
+  }
+  & .inst {
+    @apply cursor-pointer;
+    & path {
+      @apply transition-all duration-300 fill-dark;
+    }
+    & circle {
+      @apply transition-all duration-300 fill-font1;
+    }
+    &:hover circle {
+      @apply transition-all duration-300 fill-font2;
+    }
+  }
+}
+
+.pillBtn {
+  @apply py-[35px] px-[32px] rounded-[50px] uppercase w-fit;
+}
+
+.cross {
+  @apply transition w-[30px] h-[19px] flex flex-col justify-between cursor-pointer lg:hidden;
+  & .line {
+    @apply transition w-full h-[3px] bg-dark;
+  }
+
+  &.active {
+    @apply transition scale-90;
+    & .line {
+      &.middle {
+        @apply transition opacity-0;
+      }
+      &.top {
+        @apply transition rotate-45 translate-y-2;
+      }
+      &.bottom {
+        @apply transition -rotate-45 -translate-y-2;
+      }
+    }
+  }
+}
+
+.chatIcon {
+  @apply fixed bottom-0 right-0 cursor-pointer;
+  & circle {
+    @apply transition-all duration-300 fill-dark stroke-font1;
+  }
+  & path {
+    @apply transition-all duration-300 stroke-font1;
+  }
+  &:hover {
+    & circle {
+      @apply transition-all duration-300 fill-font2 stroke-dark;
+    }
+    & path {
+      @apply transition-all duration-300 stroke-dark;
+    }
+  }
+}
+
+.olived {
+  @apply transition duration-300 bg-font2 text-dark;
+  &.bordered {
+    @apply transition duration-300 border border-font2;
+  }
+  &:hover {
+    @apply transition duration-300 bg-dark text-font2;
+  }
+}
+
+.darked {
+  @apply transition duration-300 bg-dark text-extraLight;
+  &.bordered {
+    @apply transition duration-300 border border-dark;
+  }
+  &:hover {
+    @apply transition duration-300 bg-font2 text-dark;
+  }
+}
+
+.lightened {
+  @apply transition duration-300 bg-mainBg text-dark;
+  &.bordered {
+    @apply transition duration-300 border border-mainBg;
+  }
+  &:hover {
+    @apply transition duration-300 bg-dark text-mainBg;
+  }
+}
+
+.card {
+  @apply transition duration-300 uppercase font-bold text20 text-center basis-[500px] max-w-full h-[460px] lg:size-[680px] grow block relative rounded-[50px] pt-20 lg:pt-[230px];
+}
+
+/* .card {
+  @apply basis-[500px] max-w-[680px] grow h-[460px] lg:h-[680px] rounded-[50px] bg-cover bg-center overflow-hidden relative;
+  & h1 {
+    @apply font-bold uppercase text16 lg:text20;
+    &.top {
+      @apply absolute -translate-y-9 lg:-translate-y-14;
+    }
+    &.bottom {
+      @apply font-bold uppercase absolute lg:translate-y-[90px] translate-y-[60px] text-center;
+    }
+  }
+  & .logo {
+    @apply w-[260px] lg:w-[369px] h-[35px] lg:h-[50px];
+    &.olive {
+      & path {
+        @apply transition-all duration-300 fill-font2;
+      }
+    }
+    &.light {
+      & path {
+        @apply transition-all duration-300 fill-font1;
+      }
+    }
+  }
+  &.left {
+    @apply transition-all duration-300 bg-gym1 bg-transparent bg-[size:900px] bg-no-repeat lg:bg-cover max-sm:bg-[position:50%_-125px] text-font1 cursor-pointer;
+    &:hover {
+      & .bg {
+        @apply transition-all duration-300 bg-dark;
+      }
+      & .cover {
+        @apply transition-all duration-300 opacity-0;
+      }
+    }
+  }
+  &.right {
+    @apply transition-all duration-300 bg-transparent bg-gym2 bg-[size:700px] bg-no-repeat lg:bg-cover max-sm:bg-[position:50%_0px] text-font2 cursor-pointer;
+    &:hover {
+      & .olive {
+        & path {
+          @apply transition-all duration-300 fill-dark;
+        }
+      }
+      & .bg {
+        @apply transition-all duration-300 bg-font2 text-dark;
+      }
+      & .cover {
+        @apply transition-all duration-300 opacity-0;
+      }
+    }
+  }
+  & .bg {
+    @apply transition-all duration-300 w-full h-full relative font-bold flex flex-col lg:flex-row justify-between lg:justify-center lg:items-center;
+  }
+  & .cover {
+    @apply transition-all duration-300 opacity-100 bg-gradientCover w-full h-full absolute top-0 left-0;
+  }
+} */
+
+.basics {
+  @apply min-w-[310px] max-w-[680px] basis-[500px]  h-[488px] lg:h-[430px] rounded-[50px]  p-[10px] relative shrink grow flex flex-col justify-between text-font1 uppercase cursor-pointer;
+  & .image {
+    @apply h-[310px] lg:h-[344px] w-full rounded-[42px] relative bottom-0 shrink-0 bg-no-repeat overflow-hidden;
+  }
+  & .text {
+    @apply flex flex-col lg:flex-row items-center max-lg:gap-5 px-5 lg:px-[40px] h-full max-md:text-center max-lg:pt-[30px];
+    & .first {
+      @apply font-bold text20;
+    }
+    & .second {
+      @apply font-play text16 lg:text14;
+    }
+  }
+}
+
+.prideNumbers {
+  @apply uppercase mx-auto w-fit flex flex-wrap justify-center gap-[10px];
+  & .numbers {
+    @apply w-[330px] h-[240px] lg:size-[280px] rounded-[50px] pt-[50px] pb-[35px] flex flex-col justify-between items-center overflow-hidden relative;
+    &:nth-child(odd) {
+      @apply bg-light;
+      & h1 {
+        @apply text-cardBg;
+      }
+    }
+    &:nth-child(even) {
+      @apply border border-font2;
+      & h1 {
+        @apply text-dark;
+      }
+    }
+    & h1 {
+      @apply font-bold text45 lg:text50 lowercase w-full pl-8;
+    }
+    & p {
+      @apply font-play text18 lg:text16 uppercase text-dark pl-8 w-full;
+    }
+  }
+}
+
+.additionalServices {
+  @apply pt-[120px] pb-[136px] bg-mainBg max-lg:w-screen max-lg:ml-[-15px];
+}
+
+.serviceCardContainer {
+  @apply flex flex-wrap justify-center gap-[10px];
+  & .serviceCard {
+    @apply w-[330px] lg:w-[446px] lg:h-[380px] rounded-[50px] bg-dark overflow-hidden relative pt-[110px] lg:pt-[150px] px-[48px] uppercase;
+    & .image {
+      @apply size-[60px] lg:size-20 bg-iconBg rounded-full flex items-center justify-center absolute top-5 left-5 overflow-hidden;
+      & img {
+        @apply max-lg:w-[33px];
+      }
+    }
+    & h1 {
+      @apply font-bold text20 lg:text26 uppercase text-dark mb-5 lg:mb-10;
+    }
+    & ul {
+      @apply list-disc text16 font-play leading-[18px] ml-[15px] flex flex-col gap-2 mb-10;
+    }
+    &:nth-child(odd) {
+      @apply bg-light;
+    }
+    &:nth-child(even) {
+      @apply bg-extraLight;
+    }
+  }
+}
+
+.trainersBlock {
+  @apply py-[120px] flex flex-col uppercase;
+  & p {
+    @apply font-play text16 lg:text18 text-center mb-[30px] text-dark;
+  }
+  & h1 {
+    @apply font-bold text26 lg:text50 text-center text-dark mb-[50px];
+  }
+}
+
+.caruselContainer {
+  @apply w-screen xl:w-full max-xl:ml-[-15px] overflow-hidden grid max-xl:grid-cols-2 xl:grid-flow-col max-xl:gap-[15px] items-center xl:justify-between mx-auto mb-[50px];
+  & button {
+    @apply bg-dark flex items-center justify-center size-10 rounded-full;
+    &:active {
+      @apply bg-dark/70;
+    }
+  }
+  & .prev {
+    @apply max-xl:order-2 max-xl:col-span-1 max-xl:justify-self-end;
+  }
+  & .next {
+    @apply max-xl:order-3 max-xl:col-span-1 max-xl:justify-self-start;
+  }
+  & .carousel {
+    @apply w-[1010px] xl:w-[1160px] overflow-hidden relative max-xl:order-1 max-xl:col-span-2 max-xl:justify-self-center;
+    & .innerContainer {
+      @apply flex gap-[10px] w-[1010px] xl:w-[1160px] translate-x-0;
+    }
+    & .caruselItem {
+      @apply w-[330px]  xl:w-[380px] h-[490px] xl:h-[560px] bg-personCardBg rounded-[50px] p-[10px];
+      & h1 {
+        @apply font-bold text22 xl:text26 uppercase text-dark mb-5 pl-5 text-left;
+      }
+      & p {
+        @apply font-play text16 uppercase text-dark px-5 text-left w-[330px];
+      }
+      & .image {
+        @apply size-[310px] xl:size-[360px] rounded-[40px] bg-cover  mb-10 bg-personalCardInnerBg overflow-hidden;
+      }
+    }
+  }
+}
+
+.carouselSingleArrows {
+  @apply w-screen xl:w-full max-xl:ml-[-15px] overflow-hidden grid max-xl:grid-cols-2 xl:grid-flow-col gap-5 items-center xl:justify-center mx-auto mt-[60px];
+  & button {
+    @apply bg-dark flex items-center justify-center size-10 rounded-full;
+    &:active {
+      @apply bg-dark/70;
+    }
+  }
+  & .prev {
+    @apply max-xl:order-2 max-xl:col-span-1 max-xl:justify-self-end;
+  }
+  & .next {
+    @apply max-xl:order-3 max-xl:col-span-1 max-xl:justify-self-start;
+  }
+  & .carousel {
+    @apply w-[900px] h-[600px] relative max-xl:order-1 max-xl:col-span-2 max-xl:justify-self-center;
+    & .dots {
+      @apply absolute bottom-4 left-1/2 -translate-x-1/2  flex gap-2;
+    }
+    & .dot {
+      @apply transition duration-300 size-[10px] bg-light rounded-full cursor-pointer;
+      &.active {
+        @apply transition duration-300 bg-font2;
+      }
+    }
+    & .image {
+      @apply transition duration-300 absolute top-0 left-0 opacity-0 w-[900px] h-[600px] bg-cover bg-center rounded-[42px];
+      &.active {
+        @apply transition duration-300 opacity-100;
+      }
+    }
+  }
+}
+
+.startRightNow {
+  @apply max-lg:w-screen max-lg:ml-[-15px] bg-dark pt-20 lg:pt-[120px] pb-[72px] uppercase flex max-lg:flex-col overflow-hidden relative;
+  & .title {
+    @apply lg:w-1/2 max-lg:px-[25px] lg:pl-[120px] max-lg:mb-[30px];
+    & h1 {
+      @apply font-bold text28 lg:text50 mb-[30px] text-mainBg;
+    }
+    & p {
+      @apply text20 text-font2 max-lg:font-bold;
+    }
+  }
+  & .form {
+    @apply lg:w-1/2 max-lg:px-[25px] flex flex-col items-center justify-center;
+    & form {
+      @apply flex flex-col lg:w-[460px] relative mb-5;
+      & input {
+        @apply border border-font2 rounded-[50px] py-[10px] px-10 mb-[20px] w-full h-20 !text-dark font-bold text18 bg-font2 outline-none;
+        &::placeholder {
+          @apply !text-dark font-bold text18;
+        }
+      }
+    }
+  }
+}
+
+input::placeholder {
+  color: rgb(var(--dark));
+}
+
+.carouselSingleContainer {
+  @apply relative;
+  & .dots {
+    @apply absolute bottom-4 left-1/2 -translate-x-1/2  flex gap-2;
+  }
+  & .dot {
+    @apply transition duration-300 size-[10px] bg-light rounded-full cursor-pointer;
+    &.active {
+      @apply transition duration-300 bg-font2;
+    }
+  }
+  & .carousel {
+    @apply overflow-hidden rounded-[42px] size-[670px] relative;
+    & .carouselItem {
+      @apply transition-opacity duration-300 w-full h-full opacity-0 absolute  bg-no-repeat;
+      &.active {
+        @apply transition-opacity duration-300 opacity-100;
+      }
+    }
+  }
+}
+
+.trainersCard {
+  @apply w-[330px]  xl:w-[380px] h-[490px] xl:h-[560px] bg-personCardBg rounded-[50px] p-[10px];
+  & h1 {
+    @apply font-bold text22 xl:text26 uppercase text-dark mb-5 pl-5 text-left;
+  }
+  & p {
+    @apply font-play text16 uppercase text-dark px-5 text-left w-[330px];
+  }
+  & .image {
+    @apply size-[310px] xl:size-[360px] rounded-[40px] bg-cover  mb-10 bg-personalCardInnerBg overflow-hidden;
+  }
+}
+
+.selectBtn {
+  @apply transition-[height,background] duration-300 uppercase h-[60px] rounded-[30px] py-[25px] px-8 border-2 border-font2 text-dark relative hover:bg-font2 cursor-pointer;
+  & .options {
+    @apply transition duration-300 text12 opacity-0  absolute z-20 flex flex-col;
+    & .option {
+      @apply transition duration-300 rounded-[5px] hover:scale-105 py-1 text-left uppercase;
+    }
+  }
+  &.active {
+    @apply transition-height duration-300 h-[150px];
+    & svg {
+      @apply transition duration-300 rotate-180;
+    }
+    & .options {
+      @apply transition duration-300 opacity-100;
+    }
+  }
+}
+
+.modal {
+  @apply w-0 h-0 fixed top-0 left-0 z-50 backdrop-blur-sm bg-black/50 flex overflow-hidden items-center justify-center transition duration-300 opacity-0 pointer-events-none;
+  &.active {
+    @apply transition duration-300 opacity-100 pointer-events-auto;
+  }
+}
+
+.contactsCard {
+  @apply w-[575px] h-[500px] rounded-[50px] border-2 border-font2 pt-[60px] px-[37px];
+  &.active {
+    @apply border-none bg-light;
+  }
+}

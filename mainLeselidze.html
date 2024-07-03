@@ -1,0 +1,451 @@
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <link rel="stylesheet" href="output.css" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ALTJHk8BAAAAREWTEg==&lang=en_US"
+        type="text/javascript"></script>
+    <script src="index.js" defer></script>
+    <title>Document</title>
+    <!-- <style>
+            @view-transition {
+                navigation: auto;
+            }
+        </style> -->
+</head>
+
+<body>
+    <main>
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ NAV @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+        <nav class="max-w-[1160px] w-full flex justify-between lg:mx-auto items-center" id="nav">
+            <a href="/index.html">
+                <img src="./assets/logoLetter.svg" alt="logoLetter" class="w-[120px] lg:w-[142px] inline"
+                    style="view-transition-name: logo" />
+            </a>
+            <div class="cross z-40 inline" id="cross" onclick="openMenu()">
+                <div class="line top"></div>
+                <div class="line middle"></div>
+                <div class="line bottom"></div>
+            </div>
+            <div class="links" id="links">
+                <a href="price.html">цены</a>
+                <a class="active" href="mainLenina.html#directions">направления</a>
+                <a href="coaches.html">тренерский состав</a>
+                <a href="gallery.html">галерея</a>
+                <a href="contacts.html">контакты</a>
+                <a href="tel:8(938)5227733"
+                    class="transition duration-300 rounded-[30px] py-2 px-3 bg-dark !text-font2 text15 hover:bg-font2 hover:!text-dark block cursor-pointer">
+                    8 (938) 522 77 33
+                </a>
+            </div>
+        </nav>
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+        <section>
+            <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ FIRST BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+            <div class="flex flex-wrap justify-center gap-[10px] mb-[100px]">
+
+                <div class="card bg-dark text-font1">
+                    <p class="mb-5 lg:mb-[38px] text16 lg:text20 relative z-10">спортивный клуб</p>
+                    <svg class="w-[260px] lg:w-[369px] relative left-1/2 -translate-x-1/2 mb-5 lg:mb-[38px] fill-font1"
+                        viewBox="0 0 260 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M131.356 -0.000118256H133.884C135.294 -0.000118256 136.436 1.13356 136.436 2.53264V35.0098H130.695C128.746 35.0098 127.168 33.4419 127.168 31.5088V4.15781C127.168 1.86095 129.043 -0.000118256 131.356 -0.000118256Z" />
+                        <path
+                            d="M216.713 7.51792V13.6795H250.516V21.2548H216.713V27.436H252.621C256.696 27.436 260 30.7306 260 34.7952V35.0098H211.373C209.225 35.0098 207.485 33.2748 207.485 31.1336V4.01202C207.485 1.79543 209.288 -0.000118256 211.509 -0.000118256H259.837C259.928 4.12505 256.597 7.51792 252.458 7.51792H216.713Z" />
+                        <path
+                            d="M49.3487 13.3878C49.3487 13.7876 49.309 14.2004 49.1435 14.6084C48.5397 16.0926 46.2104 17.5245 37.6526 18.1225H11.3189H9.99216H9.29236V17.3983V8.35998H11.3189H15.7806H27.6869C46.1856 8.35998 48.94 10.5815 49.2974 12.7129C49.3255 12.8783 49.3387 13.0422 49.3454 13.2044C49.3454 13.2175 49.3487 13.2289 49.3487 13.2404C49.3487 13.2486 49.3454 13.2568 49.3454 13.265C49.347 13.3059 49.3487 13.3469 49.3487 13.3878ZM36.2348 -0.000118256H4.05311C1.8148 -0.000118256 0 1.79543 0 4.01202V35.0098H6.78276C8.16908 35.0098 9.29236 33.8974 9.29236 32.5262V26.5383H14.032H32.6019C56.282 26.5383 57.6633 19.3381 57.6633 13.2355C57.6633 7.46222 56.4143 0.712528 36.2348 -0.000118256Z" />
+                        <path
+                            d="M74.4451 18.1225H72.4531V8.35998H78.8255H90.5191C108.688 8.35998 111.393 10.5815 111.745 12.7129C111.773 12.8783 111.786 13.0422 111.791 13.2044C111.791 13.2175 111.794 13.2289 111.794 13.2404C111.794 13.2486 111.792 13.2568 111.792 13.265C111.792 13.3059 111.794 13.3469 111.794 13.3878C111.794 13.7876 111.755 14.2004 111.593 14.6084C111 16.0926 108.714 17.5245 100.307 18.1225H74.4451ZM117.525 32.4623L110.229 25.0147C119.26 22.5753 119.96 17.6211 119.96 13.2355C119.96 7.46222 118.735 0.712528 98.916 -0.000118256H74.4451H67.3074C65.1091 -0.000118256 63.3267 1.79543 63.3267 4.01202V35.0098H68.9842C70.8998 35.0098 72.4531 33.4436 72.4531 31.5121V26.5383H77.1098H95.3464C96.6056 26.5383 97.7884 26.5137 98.9242 26.4727L107.279 35.0098H116.47C117.788 35.0098 118.451 33.4075 117.525 32.4623Z" />
+                        <path
+                            d="M171.268 26.5462H158.712V26.5479H151.869V10.2895V8.46013L159.486 8.4634H171.268C192.851 8.4634 194.111 13.3564 194.111 17.5056C194.111 21.6532 192.851 26.5462 171.268 26.5462ZM170.513 -0.000118256H146.171V0.00151062C144.207 0.00151062 142.614 1.58403 142.614 3.53602V30.926C142.614 33.182 144.454 35.0098 146.722 35.0098H152.454V35.0081H170.513C201.554 35.0081 203.366 25.5359 203.366 17.504C203.366 9.47372 201.554 -0.000118256 170.513 -0.000118256Z" />
+                    </svg>
+                    <p class="lg:hidden text16 mb-[55px]">на леселидзе</p>
+                    <p class="mb-[90px] lg:mb-[107px] text16 lg:text20 relative z-10">
+                        Ты знаешь, где <br />
+                        начнешь новую жизнь <br />
+                        с понедельника
+                    </p>
+                    <a class="lg:hidden mb-5 text16 block" href="tel:8 938 522 77 33">8 (938) 522 77 33</a>
+                    <p class="lg:hidden text16">ул. леселидзе, 7</p>
+                    <button class="pillBtn olived bordered text18 font-bold h-20 max-lg:hidden"
+                        onClick="openModal('open', arguments[0]);">
+                        начать тренироваться
+                    </button>
+                </div>
+                <div class="card bg-gym1  bg-cover bg-center max-lg:h-[330px]">
+                    <div class="bg-black/10 size-full"></div>
+                    <div
+                        class="rounded-[45px] w-[230px] h-[53px] absolute bottom-5 left-5 bg-mainBg/20 backdrop-blur-md flex items-center justify-center font-euro font-bold text16 uppercase text-font1">
+                        ул. леселидзе, 7
+                    </div>
+                </div>
+            </div>
+            <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ SECOND BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+            <h1 class="font-bold text50 text-center mb-10">
+                НАШИ <br />
+                ПРЕИМУЩЕСТВА
+            </h1>
+            <div class="h-[690px] p-[10px] flex bg-dark rounded-[50px] text-font1 mb-[139px]">
+                <div class="carouselSingleContainer w-1/2" id="carouselMainLeselidze">
+                    <div class="carousel">
+                        <div class="carouselItem bg-mainBasicsGym1 active bg-[position:-200px_0] bg-[size:150%]">
+                        </div>
+                        <div class="carouselItem bg-mainBasicsGym2 bg-[size:150%]"></div>
+                        <div class="carouselItem bg-mainBasicsGym3 bg-[size:150%] bg-[position:-200px_0]"></div>
+                        <div class="carouselItem bg-mainBasicsGym4 bg-[position:-20px_-100px]"></div>
+                    </div>
+                </div>
+                <div class="w-1/2 flex items-center justify-center pr-[105px] pl-[70px]">
+                    <ul class="list-disc text20 font-bold font-play ml-[15px] flex flex-col gap-5 uppercase">
+                        <li>
+                            Просторный тренажерный зал площадью <br />более
+                            250 м² с прекрасным выбором профессионального
+                            оборудования
+                        </li>
+                        <li>Внушительная кардиозона</li>
+                        <li>
+                            Отдельная зона свободных весов с большим
+                            гантельным рядом
+                        </li>
+                        <li>Зона функционального тренинга</li>
+                        <li>Зона растяжки</li>
+                        <li>
+                            Потрясающая атмосфера и энергетика <br />
+                            для тренировки
+                        </li>
+                        <li>
+                            В зале работает дежурный тренер, <br />который
+                            подскажет и поможет
+                        </li>
+                        <li>Коктейль-бар</li>
+                        <li>Большая парковка возле клуба</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ THIRD BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+            <h1 class="text30 max-lg:text-center lg:text50 font-bold uppercase mb-10 lg:w-[1150px] mx-auto">
+                pride <br />
+                в <span class="text-cardBg"> цифрах</span>
+            </h1>
+            <div class="prideNumbers mb-[120px]">
+                <div class="numbers">
+                    <h1 class="!pl-0 text-center">1500м²</h1>
+                    <p>
+                        Квадратных метров уникального
+                        <br />фитнес-пространства
+                    </p>
+                </div>
+                <div class="numbers">
+                    <h1>74</h1>
+                    <p>Единицы <br />профессиональных <br />тренажеров</p>
+                </div>
+                <div class="numbers">
+                    <h1>19</h1>
+                    <p>
+                        Профессиональных <br />
+                        тренеров
+                    </p>
+                </div>
+                <div class="numbers">
+                    <h1>>500</h1>
+                    <p>
+                        положительных <br />
+                        отзывов <br />
+                        на Яндекс и Google
+                    </p>
+                    <img src="./assets/icons/star.svg" alt="star" class="absolute bottom-0 right-0" />
+                </div>
+            </div>
+            <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ FORTH BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+            <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ FIFTH BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+            <div class="trainersBlock">
+                <p>Тренерский состав</p>
+                <h1>наша <span class="text-cardBg">команда</span></h1>
+                <div class="caruselContainer" id="mainCarousel">
+                    <button class="prev">
+                        <img src="./assets/icons/arrow.svg" alt="arrow" />
+                    </button>
+                    <div class="carousel">
+                        <div class="innerContainer">
+
+                            <!-- Have to be at least 4 items -->
+
+                            <div class="caruselItem">
+                                <div class="image" style="
+                                            background-image: url(&quot;./assets/photos/1.png&quot;);
+                                        "></div>
+                                <div>
+                                    <h1>
+                                        ПАВЕЛ <br />
+                                        ЛАЗАРЕВ
+                                    </h1>
+                                    <p>Старший тренер тренажерного зала</p>
+                                </div>
+                            </div>
+
+                            <div class="caruselItem">
+                                <div class="image" style="
+                                            background-image: url(&quot;./assets/photos/2.png&quot;);
+                                        "></div>
+                                <div>
+                                    <h1>ЛЕНА <br />ДОМОКУРОВА</h1>
+                                    <p>
+                                        Персональный тренер тренажерного
+                                        зала
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="caruselItem">
+                                <div class="image" style="
+                                            background-image: url(&quot;./assets/photos/3.png&quot;);
+                                        "></div>
+                                <div>
+                                    <h1>
+                                        ВИКТОР <br />
+                                        АКИМОВ
+                                    </h1>
+                                    <p>
+                                        ПРОФЕССИОНАЛЬНЫЙ ТРЕНЕР ПО БОКСУ И
+                                        ПЕРСОНАЛЬНЫЙ ТРЕНЕР
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="caruselItem">
+                                <div class="image" style="
+                                            background-image: url(&quot;./assets/photos/4.png&quot;);
+                                        "></div>
+                                <div>
+                                    <h1>
+                                        ДАРЬЯ <br />
+                                        МАРКОВА
+                                    </h1>
+                                    <p>
+                                        Персональный тренер тренажёрного
+                                        зала
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="caruselItem">
+                                <div class="image" style="
+                                            background-image: url(&quot;./assets/photos/5.png&quot;);
+                                        "></div>
+                                <div>
+                                    <h1>
+                                        АРТЁМ <br />
+                                        МИНИН
+                                    </h1>
+                                    <p>
+                                        Персональный тренер тренажёрного
+                                        зала
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="caruselItem">
+                                <div class="image" style="
+                                            background-image: url(&quot;./assets/photos/6.png&quot;);
+                                        "></div>
+                                <div>
+                                    <h1>
+                                        НИКОЛАЙ <br />
+                                        ПАСЕЧНИК
+                                    </h1>
+                                    <p>
+                                        Персональный тренер тренажёрного
+                                        зала
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="next">
+                        <img src="./assets/icons/arrow.svg" alt="arrow" class="rotate-180" />
+                    </button>
+                </div>
+                <a href="#" class="pillBtn darked font-bold text15 lg:text18 mx-auto">весь тренерский состав</a>
+            </div>
+
+
+            <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ SIXTH BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+            <div class="startRightNow mb-[60px] lg:mb-[100px]">
+                <div class="title">
+                    <h1>НАЧНИТЕ ТРЕНИРОВАТЬСЯ ПРЯМО СЕЙЧАС!</h1>
+                    <p>
+                        ЗАПИШИТЕСЬ НА ГОСТЕВОЙ ВИЗИТ,И МЫ РАССКАЖЕМ ВАМ О
+                        ЛУЧШЕМ ПРЕДЛОЖЕНИИ ЭТОГО МЕСЯЦА!
+                    </p>
+                </div>
+                <div class="form z-20">
+                    <form action="">
+                        <input type="text" placeholder="ВАШЕ ИМЯ" />
+                        <input type="text" placeholder="НОМЕР ТЕЛЕФОНА" />
+                        <button class="pillBtn lightened bordered font-bold text18 h-20 !w-full">
+                            отправить заявку
+                        </button>
+                    </form>
+                    <p class="lg:w-[460px] text13 text-mainBg text-center leading-[14px] font-play">Нажимая кнопку
+                        «ОТПРАВИТЬ», вы
+                        даете свое
+                        согласие
+                        на <a href="#"><u>обработку
+                                персональных
+                                данных</u></a>, в
+                        соответствии с ФЗ №152</p>
+                </div>
+                <img src="./assets/patternBg.svg" alt="pattern"
+                    class="absolute right-0 lg:right-[100px] top-[-240px] max-lg:top-auto max-lg:bottom-0 z-10 max-lg:!rotate-45" />
+                <img src="./assets/patternBg.svg" alt="pattern"
+                    class="absolute top-0 max-lg:top-auto max-lg:bottom-[-200px] max-lg:!rotate-45 right-0 lg:right-[-150px] z-10" />
+            </div>
+            <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ SEVENTH BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+            <div class="rounded-[30px] lg:rounded-[50px] overflow-hidden mb-[60px] lg:mb-[70px]">
+                <img src="./assets/bg.png" alt="bg" />
+            </div>
+
+            <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ EIGHTH BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+            <div class="mb-[60px] lg:mb-[70px] max-lg:w-screen max-lg:ml-[-15px]">
+                <div id="mapLeselidze" style="width: 100%; height: 456px"></div>
+            </div>
+        </section>
+        <!-- /* @@@@@@@@@@@@@@@@@@@@@@@@@@ FOOTER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */ -->
+
+        <footer>
+            <div class="lg:flex lg:justify-between">
+                <div>
+                    <img src="./assets/logoLetter2.svg" alt="logoLetter2" class="w-[142px] mb-[30px]" />
+                    <p class="w-[185px] mb-5">
+                        Спортивный клуб «Pride» г. Геленджик
+                    </p>
+                    <div class="flex gap-2 mb-5">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.6876 0H8.3256C1.5984 0 0 1.5996 0 8.3124V15.6756C0 22.4004 1.5876 24 8.3124 24H15.6756C22.4004 24 24 22.4124 24 15.6876V8.3256C24 1.5984 22.4124 0 15.6876 0ZM19.3752 17.124H17.6244C16.962 17.124 16.7628 16.5876 15.5748 15.3996C14.538 14.4 14.1 14.2752 13.8372 14.2752C13.4748 14.2752 13.3752 14.3748 13.3752 14.8752V16.4496C13.3752 16.8756 13.2372 17.1252 12.1248 17.1252C11.0452 17.0527 9.99831 16.7247 9.07032 16.1682C8.14233 15.6118 7.3598 14.8429 6.7872 13.9248C5.4278 12.2328 4.48193 10.247 4.0248 8.1252C4.0248 7.8624 4.1244 7.6248 4.6248 7.6248H6.3756C6.8256 7.6248 6.9876 7.8252 7.1628 8.2872C8.0124 10.788 9.462 12.9624 10.05 12.9624C10.2756 12.9624 10.374 12.8628 10.374 12.3V9.7248C10.2996 8.55 9.6756 8.4504 9.6756 8.0256C9.68362 7.91355 9.73496 7.80904 9.81875 7.73422C9.90253 7.65939 10.0122 7.62015 10.1244 7.6248H12.8748C13.2504 7.6248 13.3752 7.812 13.3752 8.262V11.7372C13.3752 12.1128 13.5372 12.2376 13.65 12.2376C13.8756 12.2376 14.0496 12.1128 14.4624 11.7C15.349 10.6187 16.0734 9.41409 16.6128 8.124C16.6679 7.96904 16.7723 7.83637 16.9098 7.74623C17.0474 7.6561 17.2107 7.61345 17.3748 7.6248H19.1256C19.65 7.6248 19.7616 7.8876 19.65 8.262C19.0134 9.68812 18.2257 11.0419 17.3004 12.3C17.112 12.588 17.0364 12.738 17.3004 13.0752C17.4744 13.338 18.0876 13.8504 18.5004 14.3376C19.1003 14.936 19.5984 15.6283 19.9752 16.3872C20.1252 16.8744 19.8744 17.124 19.3752 17.124Z" />
+                        </svg>
+                        <svg width="24" height="24" class="icon" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.51562 3.51469C5.76375 1.26506 8.81812 0 12 0C15.1819 0 18.2362 1.26506 20.4844 3.51469C22.7344 5.76431 24 8.81869 24 12C24 15.1813 22.7344 18.2357 20.4844 20.4853C18.2362 22.7349 15.1819 24 12 24C8.81812 24 5.76375 22.7349 3.51562 20.4853C1.26562 18.2357 0 15.1813 0 12C0.000623381 8.81734 1.26518 5.76521 3.51562 3.51469ZM12.4303 8.85904C11.2641 9.34448 8.93157 10.3493 5.43282 11.8733C4.8647 12.0992 4.56657 12.3203 4.54032 12.5363C4.49415 12.9012 4.95113 13.0451 5.57207 13.2406C5.65724 13.2675 5.74549 13.2953 5.83595 13.3247C6.44907 13.5239 7.27407 13.7569 7.70157 13.7661C8.09157 13.7745 8.52469 13.6142 9.00282 13.2854C12.2728 11.079 13.9584 9.96379 14.0653 9.93979C14.1403 9.92292 14.2434 9.90154 14.3128 9.96398C14.3841 10.0262 14.3766 10.1444 14.3691 10.176C14.3248 10.3688 12.5365 12.0314 11.606 12.8966C11.3134 13.1686 11.1056 13.3618 11.0634 13.4057C10.9693 13.5036 10.8732 13.5961 10.781 13.6851C10.2119 14.2336 9.78505 14.6451 10.8047 15.3169C11.2991 15.6426 11.6937 15.9114 12.0881 16.18C12.5119 16.4687 12.9354 16.7571 13.4822 17.1158C13.6228 17.2079 13.7571 17.3036 13.8878 17.3969C14.3848 17.7511 14.8312 18.0694 15.3834 18.0186C15.7041 17.9892 16.0359 17.6877 16.2028 16.7884C16.6003 14.6631 17.3822 10.0585 17.5622 8.16098C17.5791 7.99485 17.5584 7.78204 17.5434 7.68867C17.5266 7.5952 17.4928 7.46207 17.3728 7.36364C17.2284 7.24692 17.0072 7.22235 16.9078 7.22395C16.4559 7.2321 15.7641 7.47285 12.4303 8.85904Z"
+                                fill="#BCB7B5" />
+                        </svg>
+
+                        <!-- <img src="./assets/tg.svg" alt="tg" /> -->
+                        <div class="relative">
+                            <svg width="24" height="24" class="inst" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="12" fill="#BCB7B5" />
+                                <path
+                                    d="M12.0003 9.52881C11.3439 9.52881 10.7144 9.78913 10.2503 10.2525C9.78614 10.7159 9.52539 11.3443 9.52539 11.9996C9.52539 12.6549 9.78614 13.2834 10.2503 13.7467C10.7144 14.2101 11.3439 14.4704 12.0003 14.4704C12.6567 14.4704 13.2862 14.2101 13.7504 13.7467C14.2145 13.2834 14.4752 12.6549 14.4752 11.9996C14.4752 11.3443 14.2145 10.7159 13.7504 10.2525C13.2862 9.78913 12.6567 9.52881 12.0003 9.52881Z"
+                                    fill="#2E2E2D" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M8.01728 5.21969C10.6643 4.92677 13.3357 4.92677 15.9827 5.21969C17.4289 5.38087 18.5948 6.51744 18.7646 7.96647C19.0785 10.6461 19.0785 13.3531 18.7646 16.0327C18.5948 17.4817 17.4289 18.6183 15.9835 18.7802C13.3362 19.0733 10.6646 19.0733 8.01728 18.7802C6.57116 18.6183 5.40528 17.4817 5.23546 16.0335C4.92151 13.3536 4.92151 10.6463 5.23546 7.96647C5.40528 6.51744 6.57116 5.38087 8.01728 5.21969ZM15.8076 7.4381C15.6056 7.4381 15.4119 7.5182 15.2691 7.66077C15.1263 7.80334 15.0461 7.99672 15.0461 8.19835C15.0461 8.39998 15.1263 8.59335 15.2691 8.73592C15.4119 8.8785 15.6056 8.9586 15.8076 8.9586C16.0096 8.9586 16.2033 8.8785 16.3461 8.73592C16.4889 8.59335 16.5691 8.39998 16.5691 8.19835C16.5691 7.99672 16.4889 7.80334 16.3461 7.66077C16.2033 7.5182 16.0096 7.4381 15.8076 7.4381ZM8.38281 11.9996C8.38281 11.0418 8.76391 10.1233 9.44227 9.4461C10.1206 8.76887 11.0407 8.38841 12 8.38841C12.9594 8.38841 13.8794 8.76887 14.5578 9.4461C15.2361 10.1233 15.6172 11.0418 15.6172 11.9996C15.6172 12.9573 15.2361 13.8759 14.5578 14.5531C13.8794 15.2303 12.9594 15.6108 12 15.6108C11.0407 15.6108 10.1206 15.2303 9.44227 14.5531C8.76391 13.8759 8.38281 12.9573 8.38281 11.9996Z"
+                                    fill="#2E2E2D" />
+                            </svg>
+                            <span class="absolute top-0 -right-3">*</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-[1px] bg-font1 mb-5 lg:hidden"></div>
+                <div class="mb-[98px] lg:mb-[25px] flex flex-wrap lg:w-2/3 justify-between">
+                    <div class="mb-[30px] order-1">
+                        <p class="mb-[10px]">
+                            ИП РУДАКОВ АЛЕКСАНДР ГЕННАДЬЕВИЧ
+                        </p>
+                        <p class="mb-[10px]">ИНН: 233710727305</p>
+                        <p class="mb-5 lg:mb-8">ОГРНИП: 314233715400012</p>
+                        <p class="cursor-pointer transition duration-300 hover:text-font2">
+                            Политика конфиденциальности
+                        </p>
+                    </div>
+                    <div class="order-2 lg:order-3">
+                        <p class="text-font2 mb-[10px]">ул. ленина, 30</p>
+                        <p class="mb-[10px] lg:mb-[18px]">
+                            8 (938) 411 13 33
+                        </p>
+                        <p class="mb-[10px] font-bold">пн-пт:</p>
+                        <p class="mb-[10px] lg:mb-[18px]">
+                            с 07:00 до 23:00
+                        </p>
+                        <p class="mb-[10px] font-bold">сб-вс:</p>
+                        <p class="mb-[10px]">с 08:00 до 22:00</p>
+                    </div>
+                    <div class="order-3 lg:order-2">
+                        <p class="text-font2 mb-[10px]">ул. леселидзе, 7</p>
+                        <p class="mb-[10px] lg:mb-[18px]">
+                            8 (938) 522 77 33
+                        </p>
+                        <p class="mb-[10px] font-bold">Ежедневно:</p>
+                        <p class="mb-[10px]">с 08:00 до 22:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full h-[1px] bg-font1 mb-5"></div>
+            <div class="lg:flex lg:flex-row-reverse lg:justify-between">
+                <p class="text12 max-sm:w-[260px] max-sm:absolute max-sm:bottom-[100px]">
+                    * Instagram — Является продуктом компании «Meta»,
+                    признанной экстремистской организацией в России
+                </p>
+                <p class="text12 w-[260px]">
+                    © 2015-2024 <br />Все права защищены
+                </p>
+            </div>
+        </footer>
+    </main>
+    <svg width="78" height="78" viewBox="0 0 78 78" fill="none" class="chatIcon" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_2163_2)">
+            <circle cx="39" cy="37" r="35" />
+            <circle cx="39" cy="37" r="34.5" />
+        </g>
+        <path
+            d="M42.6891 51.973C49.8021 51.5065 55.4666 45.8139 55.9324 38.6679C56.0225 37.27 56.0225 35.8216 55.9324 34.4237C55.4666 27.2794 49.8021 21.5902 42.6891 21.1203C40.2323 20.9599 37.7676 20.9599 35.3109 21.1203C28.1979 21.5885 22.5334 27.2794 22.0675 34.4254C21.9775 35.8387 21.9775 37.2563 22.0675 38.6696C22.2375 41.2717 23.3987 43.6817 24.7672 45.7162C25.5611 47.1394 25.0375 48.9162 24.2096 50.4707C23.6146 51.5907 23.3154 52.1499 23.5551 52.5541C23.7931 52.9583 24.3286 52.9717 25.3979 52.997C27.5145 53.0475 28.9408 52.4547 30.0731 51.6278C30.714 51.1579 31.0353 50.9238 31.2563 50.8968C31.4773 50.8699 31.9142 51.0484 32.7846 51.4021C33.5666 51.7221 34.4762 51.9191 35.3092 51.9747C37.7318 52.133 40.2631 52.133 42.6908 51.9747M38.9915 37.0005H39.0085M45.7849 37.0005H45.8002M32.1998 37.0005H32.2151"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <div class="modal close" id="modal" onclick="openModal('close', arguments[0])">
+        <div class="content relative bg-extraLight size-fit p-[10px] pb-[34px] rounded-[50px] uppercase">
+            <button class="close absolute top-[30px] right-[30px] bg-crossBg size-5 bg-cover bg-center z-30">
+            </button>
+            <div
+                class="image w-[660px] h-[344px] bg-mainBasicsGym2 bg-[size:120%] bg-[position:0px_-100px] rounded-[42px] mb-10 p-[28px] flex items-end justify-center relative">
+                <div class="absolute top-0 left-0 size-full bg-gradientCoverReverse rounded-[42px] z-10"></div>
+                <h1 class="font-bold text-white text40 text-center z-20">начни свой <br> путь к лучшей <br> версии себя!
+                </h1>
+            </div>
+            <h1 class="font-bold text30 text-dark text-center mb-5">ПОЛУЧИТЬ ПРОБНОЕ <br> ЗАНЯТИЕ</h1>
+            <div class="flex flex-col items-center">
+                <form action="" class="flex flex-col lg:w-[460px] relative mb-5">
+                    <input type="text" placeholder="ВАШЕ ИМЯ"
+                        class="rounded-[50px] py-[10px] px-10 mb-[20px] w-full h-20 !text-dark font-bold text18 bg-light outline-none placeholder:!text-dark placeholder:font-bold placeholder:text18" />
+                    <input type="text" placeholder="НОМЕР ТЕЛЕФОНА"
+                        class="rounded-[50px] py-[10px] px-10 mb-[20px] w-full h-20 !text-dark font-bold text18 bg-light outline-none placeholder:!text-dark placeholder:font-bold placeholder:text18" />
+                    <button
+                        class="pillBtn border-2 border-dark bg-dark transition duration-300 hover:bg-extraLight hover:text-dark bordered font-bold text-mainBg text18 h-20 !w-full">
+                        отправить сообщение
+                    </button>
+                </form>
+                <p class="lg:w-[460px] text13 text-dark text-center leading-[14px] font-play">Нажимая кнопку
+                    «ОТПРАВИТЬ», вы
+                    даете свое
+                    согласие
+                    на <a href="#" class="text-font2 font-bold"><u>обработку
+                            персональных
+                            данных</u></a>, в
+                    соответствии с ФЗ №152</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
