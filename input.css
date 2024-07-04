@@ -280,7 +280,7 @@ footer {
 }
 
 .additionalServices {
-  @apply pt-[120px] pb-[136px] bg-mainBg max-lg:w-screen max-lg:ml-[-15px];
+  @apply pt-[120px] pb-[136px] max-lg:bg-mainBg max-lg:w-screen max-lg:ml-[-15px];
 }
 
 .serviceCardContainer {
@@ -387,9 +387,9 @@ footer {
 }
 
 .startRightNow {
-  @apply max-lg:w-screen max-lg:ml-[-15px] bg-dark pt-20 lg:pt-[120px] pb-[72px] uppercase flex max-lg:flex-col overflow-hidden relative;
+  @apply max-lg:w-screen max-lg:ml-[-15px] bg-dark pt-20 lg:pt-[120px] pb-[72px] uppercase flex max-lg:flex-col overflow-hidden relative lg:rounded-[50px];
   & .title {
-    @apply lg:w-1/2 max-lg:px-[25px] lg:pl-[120px] max-lg:mb-[30px];
+    @apply lg:w-1/2 max-lg:px-[25px] lg:pl-[120px] max-lg:mb-[30px] font-bold;
     & h1 {
       @apply font-bold text28 lg:text50 mb-[30px] text-mainBg;
     }
