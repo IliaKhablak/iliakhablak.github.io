@@ -464,7 +464,7 @@ function openModal(state, event) {
 
 document.addEventListener("DOMContentLoaded", function (event) {
   carousel("mainCarousel");
-  carouselSingle("carouselMainLeselidze");
+  carouselSingle("carouselMainLeselidze", 5000);
   carouselSingleArrows("carouselSingleArrowsGallery", 5000);
   ymaps.ready(() => initMap("mapLenina"));
   ymaps.ready(() => initMap("mapLeselidze"));
