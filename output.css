@@ -1144,6 +1144,14 @@ video {
   height: 100%;
 }
 
+.h-\[300px\] {
+  height: 300px;
+}
+
+.h-\[600px\] {
+  height: 600px;
+}
+
 .\!w-full {
   width: 100% !important;
 }
@@ -2668,6 +2676,14 @@ video {
 
 .font-play {
   font-family: Play;
+}
+
+.text-\[50px\] {
+  font-size: 50px;
+}
+
+.text-\[30px\] {
+  font-size: 30px;
 }
 
 .font-bold {
@@ -6008,6 +6024,10 @@ input::placeholder {
 
   .lg\:h-\[660px\] {
     height: 660px;
+  }
+
+  .lg\:h-full {
+    height: 100%;
   }
 
   .lg\:w-1\/2 {
