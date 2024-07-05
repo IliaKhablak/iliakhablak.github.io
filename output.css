@@ -3811,65 +3811,6 @@ footer {
   }
 }
 
-/* .card {
-  @apply basis-[500px] max-w-[680px] grow h-[460px] lg:h-[680px] rounded-[50px] bg-cover bg-center overflow-hidden relative;
-  & h1 {
-    @apply font-bold uppercase text16 lg:text20;
-    &.top {
-      @apply absolute -translate-y-9 lg:-translate-y-14;
-    }
-    &.bottom {
-      @apply font-bold uppercase absolute lg:translate-y-[90px] translate-y-[60px] text-center;
-    }
-  }
-  & .logo {
-    @apply w-[260px] lg:w-[369px] h-[35px] lg:h-[50px];
-    &.olive {
-      & path {
-        @apply transition-all duration-300 fill-font2;
-      }
-    }
-    &.light {
-      & path {
-        @apply transition-all duration-300 fill-font1;
-      }
-    }
-  }
-  &.left {
-    @apply transition-all duration-300 bg-gym1 bg-transparent bg-[size:900px] bg-no-repeat lg:bg-cover max-sm:bg-[position:50%_-125px] text-font1 cursor-pointer;
-    &:hover {
-      & .bg {
-        @apply transition-all duration-300 bg-dark;
-      }
-      & .cover {
-        @apply transition-all duration-300 opacity-0;
-      }
-    }
-  }
-  &.right {
-    @apply transition-all duration-300 bg-transparent bg-gym2 bg-[size:700px] bg-no-repeat lg:bg-cover max-sm:bg-[position:50%_0px] text-font2 cursor-pointer;
-    &:hover {
-      & .olive {
-        & path {
-          @apply transition-all duration-300 fill-dark;
-        }
-      }
-      & .bg {
-        @apply transition-all duration-300 bg-font2 text-dark;
-      }
-      & .cover {
-        @apply transition-all duration-300 opacity-0;
-      }
-    }
-  }
-  & .bg {
-    @apply transition-all duration-300 w-full h-full relative font-bold flex flex-col lg:flex-row justify-between lg:justify-center lg:items-center;
-  }
-  & .cover {
-    @apply transition-all duration-300 opacity-100 bg-gradientCover w-full h-full absolute top-0 left-0;
-  }
-} */
-
 .basics {
   position: relative;
   display: flex;
