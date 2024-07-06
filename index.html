@@ -2,18 +2,19 @@
 
 <head>
     <meta charset="UTF-8" />
+    <link rel="manifest" href="site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="view-transition" content="same-origin" />
     <link rel="stylesheet" href="output.css" />
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ALTJHk8BAAAAREWTEg==&lang=en_US"
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ALTJHk8BAAAAREWTEg==&lang=ru_RU"
         type="text/javascript"></script>
     <script src="index.js" defer></script>
     <title>PRIDE GYM</title>
-    <style>
+    <!-- <style>
         @view-transition {
             navigation: auto;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -28,7 +29,10 @@
 
         <section class="flex flex-wrap justify-center gap-[10px]">
 
-            <a href="/mainLenina.html" class="card text-font1 bg-gym1 bg-cover bg-center group">
+            <a href="/mainLenina.html" class="card text-font1 group">
+                <div class="lazy-load bg-gymMin1 blur-[2px]">
+                    <img src="./assets/gym1.jpg" alt="gym1" loading="lazy" class="opacity-0">
+                </div>
                 <div
                     class="transition duration-300 absolute top-0 left-0 size-full bg-gradientCover rounded-[50px] z-0 group-hover:bg-dark">
                 </div>
@@ -63,9 +67,15 @@
             </a>
 
 
-            <a href="/mainLeselidze.html" class="card text-font2 bg-gym2 bg-cover bg-center group">
+            <a href="/mainLeselidze.html" class="card text-font2 group">
+                <div class="bg-gymMin2 lazy-load blur-[2px]">
+                    <img src="./assets/gym2.jpeg" alt="gym2" class="opacity-0" loading="lazy">
+                </div>
                 <div
-                    class="transition duration-300 absolute top-0 left-0 size-full bg-gradientCover rounded-[50px] z-0 group-hover:bg-font2 group-hover:bg-[image:none]">
+                    class="transition duration-300 absolute top-0 left-0 size-full bg-gradientCover rounded-[50px] z-0">
+                </div>
+                <div
+                    class="transition duration-300 absolute top-0 left-0 size-full rounded-[50px] z-10 group-hover:bg-font2 ">
                 </div>
                 <p
                     class="mb-5 lg:mb-[38px] text16 lg:text20 relative z-10 transition duration-300 group-hover:text-dark">

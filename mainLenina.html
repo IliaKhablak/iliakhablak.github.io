@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="view-transition" content="same-origin" />
     <link rel="stylesheet" href="output.css" />
+    <link rel="manifest" href="site.webmanifest" />
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script> -->
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ALTJHk8BAAAAREWTEg==&lang=en_US"
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ALTJHk8BAAAAREWTEg==&lang=ru_RU"
         type="text/javascript"></script>
     <script src="index.js" defer></script>
     <title>PRIDE GYM на Ленина</title>
-    <style>
+    <!-- <style>
         @view-transition {
             navigation: auto;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -75,7 +76,11 @@
                         начать тренироваться
                     </button>
                 </div>
-                <div class="card bg-gym2 bg-cover bg-center max-lg:h-[330px]">
+                <div
+                    class="uppercase font-bold text20 text-center basis-[500px] max-w-full h-[460px] lg:size-[680px] grow block relative rounded-[50px] max-lg:h-[330px]">
+                    <div class=" bg-gymMin2 lazy-load blur-[2px]">
+                        <img src="./assets/gym2.jpeg" alt="gym1" class="opacity-0" loading="lazy">
+                    </div>
                     <div
                         class="rounded-[45px] w-[230px] h-[53px] absolute bottom-5 left-5 bg-mainBg/20 backdrop-blur-md flex items-center justify-center font-euro font-bold text16 uppercase text-font1">
                         ул. ленина, 30
@@ -83,7 +88,7 @@
                 </div>
             </div>
             <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ SECOND BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-            <h1 class="font-bold text30 lg:text50 text-center mb-10" id="directions">
+            <h1 class="font-bold text30 lg:text50 text-center mb-10 text-dark" id="directions">
                 ОСНОВНЫЕ <br />НАПРАВЛЕНИЯ
             </h1>
             <div class="flex flex-wrap justify-center gap-[10px] mb-[120px]">
@@ -93,9 +98,11 @@
                         <span class="second lg:w-1/2">ДВА ПРОСТОРНЫХ ЗАЛА С ТРЕНАЖЁРАМИ И СВОБОДНЫМИ
                             ВЕСАМИ</span>
                     </div>
-                    <div
-                        class="image bg-mainBasicsGym1 bg-[size:160%] bg-[position:-120px_-40px] lg:bg-[size:120%] lg:-scale-x-100 lg:bg-[position:-5px_-45px]">
-                        <div class="bg-black/20 size-full"></div>
+                    <div class="image">
+                        <div class=" bg-mainBasicsGym1Min lazy-load blur-[2px]">
+                            <img src="./assets/main-basics-1.png" alt="gym1" class="opacity-0" loading="lazy">
+                        </div>
+                        <div class="bg-black/20 size-full absolute top-0 left-0"></div>
                     </div>
                 </div>
                 <div class="basics bg-cardBg" onclick="window.location.href = 'cardio.html'">
@@ -104,9 +111,11 @@
                         <span class="second lg:w-[65%]">БОЛЬШОЕ КОЛИЧЕСТВО БЕГОВЫХ ДОРОЖЕК, А ТАКЖЕ
                             ЭЛЛИПСОИДЫ, СТЕППЕРЫ И ВЕЛОТРЕНАЖЁРЫ</span>
                     </div>
-                    <div
-                        class="image bg-mainBasicsGym2 bg-[size:170%] bg-[position:-40px_-60px] lg:bg-[size:120%] lg:bg-[position:-40px_-60px]">
-                        <div class="bg-black/20 size-full"></div>
+                    <div class="image">
+                        <div class=" bg-mainBasicsGym2Min lazy-load blur-[2px]">
+                            <img src="./assets/main-basics-2.png" alt="gym1" class="opacity-0" loading="lazy">
+                        </div>
+                        <div class="bg-black/20 size-full absolute top-0 left-0"></div>
                     </div>
                 </div>
                 <div class="basics bg-cardBg max-lg:order-4">
@@ -116,9 +125,11 @@
                         <span class="second lg:w-1/2">ЗОНА ЕДИНОБОРСТВ С РИНГОМ,ТАТАМИ И ЗОНОЙ
                             КРОССФИТА.</span>
                     </div>
-                    <div
-                        class="image bg-mainBasicsGym3 bg-[size:150%] bg-[position:-85px_0px] lg:bg-[size:110%] lg:bg-[position:-45px_0px]">
-                        <div class="bg-black/20 size-full"></div>
+                    <div class="image">
+                        <div class=" bg-mainBasicsGym3Min lazy-load blur-[2px]">
+                            <img src="./assets/main-basics-3.png" alt="gym1" class="opacity-0" loading="lazy">
+                        </div>
+                        <div class="bg-black/20 size-full absolute top-0 left-0"></div>
                     </div>
                 </div>
                 <div class="basics bg-dark max-lg:order-3">
@@ -129,15 +140,17 @@
                             СТРЕТЧИНГ, ПИЛАТЕС, СИЛОВЫЕ ТРЕНИРОВКИ И
                             ДР.</span>
                     </div>
-                    <div
-                        class="image bg-mainBasicsGym4 bg-[size:170%] bg-[position:-30px_-55px] lg:bg-[size:110%] lg:bg-[position:-45px_-55px]">
-                        <div class="bg-black/20 size-full"></div>
+                    <div class="image">
+                        <div class=" bg-mainBasicsGym4Min lazy-load blur-[2px]">
+                            <img src="./assets/main-basics-4.png" alt="gym1" class="opacity-0" loading="lazy">
+                        </div>
+                        <div class="bg-black/20 size-full absolute top-0 left-0"></div>
                     </div>
                 </div>
             </div>
 
             <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ THIRD BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-            <h1 class="text30 max-lg:text-center lg:text50 font-bold uppercase mb-10 lg:w-[1150px] mx-auto">
+            <h1 class="text30 max-lg:text-center lg:text50 font-bold uppercase mb-10 lg:w-[1150px] mx-auto text-dark">
                 pride <br />
                 в <span class="text-cardBg"> цифрах</span>
             </h1>
@@ -273,9 +286,12 @@
 
 
                             <div class="caruselItem">
-                                <div class="image" style="
-                                            background-image: url(&quot;./assets/photos/1.png&quot;);
-                                        "></div>
+                                <div class="image">
+                                    <div class="lazy-load blur-[2px]"
+                                        style="background-image: url(./assets/photos/4-min.webp);">
+                                        <img src="./assets/photos/4.png" alt="gym1" class="opacity-0" loading="lazy">
+                                    </div>
+                                </div>
                                 <div>
                                     <h1>
                                         ПАВЕЛ <br />
@@ -286,9 +302,12 @@
                             </div>
 
                             <div class="caruselItem">
-                                <div class="image" style="
-                                            background-image: url(&quot;./assets/photos/2.png&quot;);
-                                        "></div>
+                                <div class="image">
+                                    <div class=" lazy-load blur-[2px]"
+                                        style="background-image: url(./assets/photos/5-min.webp);">
+                                        <img src="./assets/photos/5.png" alt="gym1" class="opacity-0" loading="lazy">
+                                    </div>
+                                </div>
                                 <div>
                                     <h1>ЛЕНА <br />ДОМОКУРОВА</h1>
                                     <p>
@@ -299,9 +318,12 @@
                             </div>
 
                             <div class="caruselItem">
-                                <div class="image" style="
-                                            background-image: url(&quot;./assets/photos/3.png&quot;);
-                                        "></div>
+                                <div class="image">
+                                    <div class=" lazy-load blur-[2px]"
+                                        style="background-image: url(./assets/photos/6-min.webp);">
+                                        <img src="./assets/photos/6.png" alt="gym1" class="opacity-0" loading="lazy">
+                                    </div>
+                                </div>
                                 <div>
                                     <h1>
                                         ВИКТОР <br />
@@ -315,9 +337,12 @@
                             </div>
 
                             <div class="caruselItem">
-                                <div class="image" style="
-                                            background-image: url(&quot;./assets/photos/4.png&quot;);
-                                        "></div>
+                                <div class="image">
+                                    <div class=" lazy-load blur-[2px]"
+                                        style="background-image: url(./assets/photos/4-min.webp);">
+                                        <img src="./assets/photos/4.png" alt="gym1" class="opacity-0" loading="lazy">
+                                    </div>
+                                </div>
                                 <div>
                                     <h1>
                                         ДАРЬЯ <br />
@@ -331,9 +356,12 @@
                             </div>
 
                             <div class="caruselItem">
-                                <div class="image" style="
-                                            background-image: url(&quot;./assets/photos/5.png&quot;);
-                                        "></div>
+                                <div class="image">
+                                    <div class=" lazy-load blur-[2px]"
+                                        style="background-image: url(./assets/photos/5-min.webp);">
+                                        <img src="./assets/photos/5.png" alt="gym1" class="opacity-0" loading="lazy">
+                                    </div>
+                                </div>
                                 <div>
                                     <h1>
                                         АРТЁМ <br />
@@ -347,9 +375,12 @@
                             </div>
 
                             <div class="caruselItem">
-                                <div class="image" style="
-                                            background-image: url(&quot;./assets/photos/6.png&quot;);
-                                        "></div>
+                                <div class="image">
+                                    <div class=" lazy-load blur-[2px]"
+                                        style="background-image: url(./assets/photos/6-min.webp);">
+                                        <img src="./assets/photos/6.png" alt="gym1" class="opacity-0" loading="lazy">
+                                    </div>
+                                </div>
                                 <div>
                                     <h1>
                                         НИКОЛАЙ <br />
@@ -411,7 +442,7 @@
 
             <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ EIGHTH BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-            <div class="mb-[60px] lg:mb-[70px] max-lg:w-screen max-lg:ml-[-15px]">
+            <div class="map">
                 <div id="mapLenina" style="width: 100%; height: 456px"></div>
             </div>
         </section>

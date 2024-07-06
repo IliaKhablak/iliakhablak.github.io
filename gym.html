@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="view-transition" content="same-origin" />
+    <link rel="manifest" href="site.webmanifest" />
     <link rel="stylesheet" href="output.css" />
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ALTJHk8BAAAAREWTEg==&lang=en_US"
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ALTJHk8BAAAAREWTEg==&lang=ru_RU"
         type="text/javascript"></script>
     <script src="index.js" defer></script>
     <title>PRIDE GYM тренажерный зал</title>
-    <style>
+    <!-- <style>
         @view-transition {
             navigation: auto;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -64,8 +65,10 @@
                         начать тренироваться
                     </button>
                 </div>
-                <div
-                    class="basis-[500px] grow max-w-1/2 h-[330px] md:h-[660px] rounded-[42px] bg-directionsBg1 bg-cover bg-center bg-no-repeat">
+                <div class="basis-[500px] grow max-w-1/2 h-[330px] md:h-[660px] rounded-[42px] relative">
+                    <div class=" bg-directionsBg1 lazy-load blur-[2px]">
+                        <img src="./assets/directions1.png" alt="gym1" class="opacity-0" loading="lazy">
+                    </div>
                 </div>
             </div>
 
@@ -79,11 +82,26 @@
                     class="p-[10px] flex flex-wrap justify-center xl:justify-between items-center gap-[30px] max-xl:pb-10 lg:gap-[50px] bg-dark rounded-[50px] text-font1">
                     <div class="carouselSingleContainer w-full xl:w-1/2  shrink-0" id="carouselMainLeselidze">
                         <div class="carousel">
-                            <div class="carouselItem bg-mainBasicsGym1 active ">
+                            <div class="carouselItem active ">
+                                <div class=" bg-mainBasicsGym1Min lazy-load blur-[2px]">
+                                    <img src="./assets/main-basics-1.png" alt="gym1" class="opacity-0" loading="lazy">
+                                </div>
                             </div>
-                            <div class="carouselItem bg-mainBasicsGym2 "></div>
-                            <div class="carouselItem bg-mainBasicsGym3 "></div>
-                            <div class="carouselItem bg-mainBasicsGym4 "></div>
+                            <div class="carouselItem ">
+                                <div class=" bg-mainBasicsGym2Min lazy-load blur-[2px]">
+                                    <img src="./assets/main-basics-2.png" alt="gym2" class="opacity-0" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="carouselItem ">
+                                <div class=" bg-mainBasicsGym3Min lazy-load blur-[2px]">
+                                    <img src="./assets/main-basics-3.png" alt="gym2" class="opacity-0" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="carouselItem ">
+                                <div class=" bg-mainBasicsGym4Min lazy-load blur-[2px]">
+                                    <img src="./assets/main-basics-4.png" alt="gym2" class="opacity-0" loading="lazy">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -120,7 +138,12 @@
                 </h1>
                 <div class="flex flex-wrap gap-x-[10px] gap-y-5 justify-center" id="addTrainers">
                     <div class="trainersCard">
-                        <div class="image" style="background-image: url(&quot;./assets/photos/1.png&quot;);"></div>
+                        <div class="image">
+                            <div class="lazy-load blur-[2px]"
+                                style="background-image: url(./assets/photos/4-min.webp);">
+                                <img src="./assets/photos/4.png" alt="gym1" class="opacity-0" loading="lazy">
+                            </div>
+                        </div>
                         <div>
                             <h1>
                                 ПАВЕЛ <br />
@@ -131,7 +154,12 @@
                     </div>
 
                     <div class="trainersCard">
-                        <div class="image" style="background-image: url(./assets/photos/4.png);"></div>
+                        <div class="image">
+                            <div class="lazy-load blur-[2px]"
+                                style="background-image: url(./assets/photos/5-min.webp);">
+                                <img src="./assets/photos/5.png" alt="gym1" class="opacity-0" loading="lazy">
+                            </div>
+                        </div>
                         <div>
                             <h1>
                                 ДАРЬЯ <br />

@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="view-transition" content="same-origin" />
     <link rel="stylesheet" href="output.css" />
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ALTJHk8BAAAAREWTEg==&lang=en_US"
+    <link rel="manifest" href="site.webmanifest" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ALTJHk8BAAAAREWTEg==&lang=ru_RU"
         type="text/javascript"></script>
     <script src="index.js" defer></script>
     <title>PRIDE GYM на Леселидзе</title>
-    <style>
+    <!-- <style>
         @view-transition {
             navigation: auto;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -76,7 +77,10 @@
                         начать тренироваться
                     </button>
                 </div>
-                <div class="card bg-gym1  bg-cover bg-center max-lg:h-[330px]">
+                <div class="card max-lg:h-[330px]">
+                    <div class="bg-gymMin1 lazy-load blur-[2px]">
+                        <img src="./assets/gym1.jpg" alt="gym1" class="opacity-0" loading="lazy">
+                    </div>
                     <div class="bg-black/10 size-full absolute top-0 left-0 rounded-[50px]"></div>
                     <div
                         class="rounded-[45px] w-[230px] h-[53px] absolute bottom-5 left-5 bg-mainBg/20 backdrop-blur-md flex items-center justify-center font-euro font-bold text16 uppercase text-font1">
@@ -322,7 +326,7 @@
 
             <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ EIGHTH BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-            <div class="mb-[60px] lg:mb-[70px] max-lg:w-screen max-lg:ml-[-15px]">
+            <div class="map">
                 <div id="mapLeselidze" style="width: 100%; height: 456px"></div>
             </div>
         </section>

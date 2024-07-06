@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="view-transition" content="same-origin" />
     <link rel="stylesheet" href="output.css" />
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ALTJHk8BAAAAREWTEg==&lang=en_US"
+    <link rel="manifest" href="site.webmanifest" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ALTJHk8BAAAAREWTEg==&lang=ru_RU"
         type="text/javascript"></script>
     <script src="index.js" defer></script>
     <title>PRIDE GYM кардио</title>
-    <style>
+    <!-- <style>
         @view-transition {
             navigation: auto;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -66,8 +67,10 @@
                         начать тренироваться
                     </button>
                 </div>
-                <div
-                    class="basis-[500px] grow max-w-1/2 h-[330px] md:h-[660px] rounded-[42px] bg-cardioBg1 bg-center bg-cover bg-no-repeat">
+                <div class="basis-[500px] grow max-w-1/2 h-[330px] md:h-[660px] rounded-[42px] relative">
+                    <div class=" bg-cardioBg1 lazy-load blur-[2px]">
+                        <img src="./assets/cardio1.png" alt="gym1" class="opacity-0" loading="lazy">
+                    </div>
                 </div>
             </div>
 

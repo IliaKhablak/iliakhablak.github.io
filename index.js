@@ -317,23 +317,38 @@ function initMap(id) {
       id === "mapLenina" ? [44.563748, 38.080447] : [44.548937, 38.074294],
     // Zoom level. Acceptable values:
     // from 0 (the entire world) to 19.
-    zoom: 17,
-    controls: [],
+    zoom: 14,
+    controls: ["zoomControl"],
   });
-  const MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+  // const bla = document.querySelectorAll('[ class$="gotoymaps" ]');
+  // if (bla.length < 1) return;
+  // bla[0].style.margin = "0 0 0 50px";
+  // console.log("@@@@@@ ", bla);
+  // myMap.controls.add("geolocationControl", {
+  //   float: "none",
+  //   position: {
+  //     bottom: "40px",
+  //     left: "15px",
+  //   },
+  // });
+  const MyIconContentLayoutLenina = ymaps.templateLayoutFactory.createClass(
     `<div class="rounded-full size-[62px] bg-font2 relative">
       <div class="flex items-center justify-center h-full">
         <img src="./assets/icons/logo.svg" alt="logo">
       </div>
-      <p class="bg-white text18 ${
-        id === "mapLenina" ? "w-[130px]" : "w-[150px]"
-      } whitespace-pre uppercase absolute top-[22px] left-full">${
-      id === "mapLenina" ? "ул. ЛЕНИНА 30" : "ул. ЛЕСЕЛИДЗЕ 7"
-    }</p>
+      <p class="bg-white text18 w-[130px] whitespace-pre uppercase absolute top-[22px] left-full">ул. ЛЕНИНА 30</p>
     </div>`
   );
-  const myPlacemark = new ymaps.Placemark(
-    id === "mapLenina" ? [44.563748, 38.080447] : [44.548937, 38.074294],
+  const MyIconContentLayoutLeselidze = ymaps.templateLayoutFactory.createClass(
+    `<div class="rounded-full size-[62px] bg-font2 relative">
+      <div class="flex items-center justify-center h-full">
+        <img src="./assets/icons/logo.svg" alt="logo">
+      </div>
+      <p class="bg-white text18 w-[150px] whitespace-pre uppercase absolute top-[22px] left-full">ул. ЛЕСЕЛИДЗЕ 7</p>
+    </div>`
+  );
+  const myPlacemarkLenina = new ymaps.Placemark(
+    [44.563748, 38.080447],
     {},
     {
       /**
@@ -344,7 +359,7 @@ function initMap(id) {
       // Custom image for the placemark icon.
       // iconImageHref: "./assets/icons/logo.svg",
       // The size of the placemark.
-      iconContentLayout: MyIconContentLayout,
+      iconContentLayout: MyIconContentLayoutLenina,
       /**
        * The offset of the upper left corner of the icon relative
        * to its "tail" (the anchor point).
@@ -352,7 +367,52 @@ function initMap(id) {
       iconImageOffset: [-100, -100],
     }
   );
-  myMap.geoObjects.add(myPlacemark);
+  const myPlacemarkLeselidze = new ymaps.Placemark(
+    [44.548937, 38.074294],
+    {},
+    {
+      /**
+       * Options.
+       * You must specify this type of layout.
+       */
+      // iconLayout: "default#image",
+      // Custom image for the placemark icon.
+      // iconImageHref: "./assets/icons/logo.svg",
+      // The size of the placemark.
+      iconContentLayout: MyIconContentLayoutLeselidze,
+      /**
+       * The offset of the upper left corner of the icon relative
+       * to its "tail" (the anchor point).
+       */
+      iconImageOffset: [-100, -100],
+    }
+  );
+  myMap.geoObjects.add(myPlacemarkLenina);
+  myMap.geoObjects.add(myPlacemarkLeselidze);
+  myPlacemarkLenina.events.add("click", function (e) {
+    if (!myMap.balloon.isOpen()) {
+      var coords = e.get("coords");
+      myMap.balloon.open(coords, {
+        contentHeader: "PrideGYM",
+        contentBody: "<p>г. Геленджик, ул. ЛЕНИНА 30</p>",
+        // contentFooter: "<sup>Click again</sup>",
+      });
+    } else {
+      myMap.balloon.close();
+    }
+  });
+  myPlacemarkLeselidze.events.add("click", function (e) {
+    if (!myMap.balloon.isOpen()) {
+      var coords = e.get("coords");
+      myMap.balloon.open(coords, {
+        contentHeader: "PrideGYM",
+        contentBody: "<p>г. Геленджик, ул. ЛЕСЕЛИДЗЕ 7</p>",
+        // contentFooter: "<sup>Click again</sup>",
+      });
+    } else {
+      myMap.balloon.close();
+    }
+  });
 }
 
 function openMenu() {
@@ -368,22 +428,10 @@ function openMenu() {
 function addTrainers() {
   const container = document.getElementById("addTrainers");
   if (!container) return;
+  const trainerCard = container.getElementsByClassName("trainersCard")[0];
   for (let i = 0; i < 20; i++) {
-    const trainersCard = document.createElement("div");
-    trainersCard.classList.add("trainersCard");
-    const img = document.createElement("div");
-    img.classList.add("image");
-    img.style.backgroundImage = `url("./assets/photos/4.png")`;
-    const text = document.createElement("div");
-    const h1 = document.createElement("h1");
-    h1.innerHTML = `ДАРЬЯ <br />МАРКОВА`;
-    const p = document.createElement("p");
-    p.innerText = "Персональный тренер тренажёрного зала";
-    text.appendChild(h1);
-    text.appendChild(p);
-    trainersCard.appendChild(img);
-    trainersCard.appendChild(text);
-    container.appendChild(trainersCard);
+    const newOne = trainerCard.cloneNode(true);
+    container.appendChild(newOne);
   }
 }
 
@@ -420,6 +468,24 @@ function openModal(state, event) {
       clearTimeout(timeout);
     }, 350);
   }
+}
+
+function lazyLoad() {
+  function loaded(div, img) {
+    div.classList.toggle("blur-[2px]");
+    img.classList.toggle("opacity-0");
+  }
+
+  const lazyDivs = document.querySelectorAll(".lazy-load");
+  if (lazyDivs.length < 1) return;
+  lazyDivs.forEach((lazyDiv) => {
+    const img = lazyDiv.querySelector("img");
+    if (img.complete) {
+      loaded(lazyDiv, img);
+    } else {
+      img.addEventListener("load", () => loaded(lazyDiv, img));
+    }
+  });
 }
 
 // function generateModal(state) {
@@ -469,4 +535,5 @@ document.addEventListener("DOMContentLoaded", function (event) {
   ymaps.ready(() => initMap("mapLenina"));
   ymaps.ready(() => initMap("mapLeselidze"));
   addTrainers();
+  lazyLoad();
 });

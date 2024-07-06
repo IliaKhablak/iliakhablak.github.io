@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: "Eurofontextendedc";
-  src: url("./assets/eurofontextendedc.otf");
+  src: url("./assets/EurofontExtendedC.otf");
 }
 
 @font-face {
   font-family: "Eurofontextendedc";
-  src: url("./assets/eurofontextendedc_bold.otf");
+  src: url("./assets/EurofontExtendedC-Bold.otf");
   font-weight: bold;
 }
 
@@ -287,7 +287,13 @@ footer {
         @apply font-play text16 uppercase text-dark px-5 text-left w-[330px];
       }
       & .image {
-        @apply size-[310px] xl:size-[360px] rounded-[40px] bg-cover  mb-10 bg-personalCardInnerBg overflow-hidden;
+        @apply size-[310px] xl:size-[360px] rounded-[40px] mb-10 bg-personalCardInnerBg overflow-hidden relative;
+        & .lazy-load {
+          @apply bg-top;
+        }
+        & img {
+          @apply object-top;
+        }
       }
     }
   }
@@ -370,7 +376,7 @@ input::placeholder {
   & .carousel {
     @apply overflow-hidden rounded-[42px] w-full h-[310px] md:h-[670px] relative;
     & .carouselItem {
-      @apply transition-opacity duration-300 w-full h-full opacity-0 absolute  bg-no-repeat bg-cover bg-center;
+      @apply transition-opacity duration-300 w-full h-full opacity-0 absolute;
       &.active {
         @apply transition-opacity duration-300 opacity-100;
       }
@@ -387,7 +393,13 @@ input::placeholder {
     @apply font-play text16 uppercase text-dark px-5 text-left w-[330px];
   }
   & .image {
-    @apply size-[310px] xl:size-[360px] rounded-[40px] bg-cover  mb-10 bg-personalCardInnerBg overflow-hidden;
+    @apply size-[310px] xl:size-[360px] rounded-[40px] bg-cover  mb-10 bg-personalCardInnerBg overflow-hidden relative;
+    & .lazy-load {
+      @apply bg-top;
+    }
+    & img {
+      @apply object-top;
+    }
   }
 }
 
@@ -448,5 +460,20 @@ input::placeholder {
   @apply w-full lg:w-[575px] h-fit lg:h-[500px] rounded-[50px] border-2 border-font2 pt-[60px] pb-5 px-[37px];
   &.active {
     @apply border-none bg-light;
+  }
+}
+
+[class$="gotoymaps"]:first-child {
+  @apply lg:ml-[50px];
+}
+
+.map {
+  @apply mb-[60px] lg:mb-[70px] max-lg:w-screen max-lg:ml-[-15px] lg:rounded-[50px] lg:overflow-hidden;
+}
+
+.lazy-load {
+  @apply transition duration-300 absolute top-0 left-0 size-full rounded-[50px] overflow-hidden bg-center bg-cover;
+  & img {
+    @apply transition duration-300 size-full object-cover object-center;
   }
 }
