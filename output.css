@@ -720,6 +720,11 @@ video {
   font-size: 12px;
 }
 
+.text10 {
+  line-height: 10px;
+  font-size: 10px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -5899,6 +5904,11 @@ input::placeholder {
   .lg\:text16 {
     line-height: 16px;
     font-size: 16px;
+  }
+
+  .lg\:text12 {
+    line-height: 12px;
+    font-size: 12px;
   }
 }
 

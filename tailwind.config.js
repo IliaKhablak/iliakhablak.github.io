@@ -128,6 +128,10 @@ module.exports = {
           lineHeight: "12px",
           fontSize: "12px",
         },
+        ".text10": {
+          lineHeight: "10px",
+          fontSize: "10px",
+        },
       });
     }),
   ],
