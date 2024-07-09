@@ -2331,10 +2331,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\.\/assets\/photos\/4\.png\)\] {
-  background-image: url(./assets/photos/4.png);
-}
-
 .bg-cardioBg1 {
   background-image: url('./assets/cardio1-min.jpg');
 }
@@ -2344,7 +2340,7 @@ video {
 }
 
 .bg-galleryBg1 {
-  background-image: url('./assets/gallery1.png');
+  background-image: url('./assets/gallery1-min.jpg');
 }
 
 .bg-gradientCover {
@@ -2396,7 +2392,7 @@ video {
 }
 
 .bg-priceBg1 {
-  background-image: url('./assets/priceBg1.png');
+  background-image: url('./assets/priceBg1-min.jpg');
 }
 
 .decoration-slice {
@@ -2417,10 +2413,6 @@ video {
 .box-decoration-clone {
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
-}
-
-.bg-\[size\:150\%\] {
-  background-size: 150%;
 }
 
 .bg-cover {
@@ -2454,14 +2446,6 @@ video {
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
-}
-
-.bg-\[position\:-200px_0\] {
-  background-position: -200px 0;
-}
-
-.bg-\[position\:-20px_-100px\] {
-  background-position: -20px -100px;
 }
 
 .bg-center {
@@ -4659,15 +4643,30 @@ footer {
       display: flex;
     }
     & .dots {
+      height: 10px;
+    }
+    & .dots {
+      max-width: 265px;
+    }
+    & .dots {
       --tw-translate-x: -50%;
       transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     }
     & .dots {
+      justify-content: flex-start;
+    }
+    & .dots {
       gap: 0.5rem;
+    }
+    & .dots {
+      overflow: hidden;
     }
     & .dot {
       width: 10px;
       height: 10px;
+    }
+    & .dot {
+      flex-shrink: 0;
     }
     & .dot {
       cursor: pointer;
@@ -4987,15 +4986,27 @@ input::placeholder {
     display: flex;
   }
   & .dots {
+    max-width: 265px;
+  }
+  & .dots {
     --tw-translate-x: -50%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
   & .dots {
+    justify-content: flex-start;
+  }
+  & .dots {
     gap: 0.5rem;
+  }
+  & .dots {
+    overflow: hidden;
   }
   & .dot {
     width: 10px;
     height: 10px;
+  }
+  & .dot {
+    flex-shrink: 0;
   }
   & .dot {
     cursor: pointer;
@@ -5747,6 +5758,32 @@ input::placeholder {
   }
   & img {
     transition-duration: 300ms;
+  }
+}
+
+@keyframes slideLogo {
+  0% {
+    left: 50%;
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes slideLogoReverse {
+  0% {
+    left: 0px;
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  100% {
+    left: 50%;
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
 

@@ -14,9 +14,9 @@ function carousel(id) {
     if (x0 || x0 === 0) {
       let dx = unify(e).clientX - x0,
         s = Math.sign(dx);
-      if (s === 1) {
+      if (s > 0) {
         prevMove();
-      } else if (s === -1) {
+      } else if (s < 0) {
         nextMove();
       }
       x0 = null;
@@ -102,9 +102,11 @@ function carousel(id) {
     }
   }
 
-  prev.addEventListener("click", prevMove);
-  next.addEventListener("click", nextMove);
+  prev.addEventListener("click", debounce(prevMove, 100));
+  next.addEventListener("click", debounce(nextMove, 100));
 }
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 function carouselSingle(id, timer = false) {
   let i = 0,
@@ -122,9 +124,9 @@ function carouselSingle(id, timer = false) {
     if (x0 || x0 === 0) {
       let dx = unify(e).clientX - x0,
         s = Math.sign(dx);
-      if (s === 1) {
+      if (s > 0) {
         prevMove();
-      } else if (s === -1) {
+      } else if (s < 0) {
         nextMove();
       }
       x0 = null;
@@ -144,6 +146,11 @@ function carouselSingle(id, timer = false) {
       images[i].classList.remove("active");
     }
     dots[index].classList.add("active");
+    dots[index].scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
     images[index].classList.add("active");
     pos = index;
   }
@@ -200,7 +207,21 @@ function carouselSingle(id, timer = false) {
     pos++;
     switchPos(pos);
   }
+
+  document.addEventListener("keyup", (e) => {
+    if (e.target.tagName === "INPUT") return;
+    if (e.key === "ArrowLeft") {
+      // debounce(prevMove, 100);
+      prevMove();
+    }
+    if (e.key === "ArrowRight") {
+      // debounce(nextMove, 100);
+      nextMove();
+    }
+  });
 }
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 function carouselSingleArrows(id, timer = false) {
   let i = 0,
@@ -218,9 +239,9 @@ function carouselSingleArrows(id, timer = false) {
     if (x0 || x0 === 0) {
       let dx = unify(e).clientX - x0,
         s = Math.sign(dx);
-      if (s === 1) {
+      if (s > 0) {
         prevMove();
-      } else if (s === -1) {
+      } else if (s < 0) {
         nextMove();
       }
       x0 = null;
@@ -240,13 +261,17 @@ function carouselSingleArrows(id, timer = false) {
       images[i].classList.remove("active");
     }
     dots[index].classList.add("active");
+    dots[index].scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
     images[index].classList.add("active");
     pos = index;
   }
 
   const carouselContainer = document.getElementById(id);
   if (!carouselContainer) return;
-
   const prev = carouselContainer.getElementsByClassName("prev")[0];
   const next = carouselContainer.getElementsByClassName("next")[0];
   const carousel = carouselContainer.getElementsByClassName("carousel")[0];
@@ -300,9 +325,23 @@ function carouselSingleArrows(id, timer = false) {
     switchPos(pos);
   }
 
-  prev.addEventListener("click", prevMove);
-  next.addEventListener("click", nextMove);
+  prev.addEventListener("click", debounce(prevMove, 100));
+  next.addEventListener("click", debounce(nextMove, 100));
+
+  document.addEventListener("keyup", (e) => {
+    if (e.target.tagName === "INPUT") return;
+    if (e.key === "ArrowLeft") {
+      // debounce(prevMove, 100);
+      prevMove();
+    }
+    if (e.key === "ArrowRight") {
+      // debounce(nextMove, 100);
+      nextMove();
+    }
+  });
 }
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 function initMap(id) {
   const el = document.getElementById(id);
@@ -415,6 +454,8 @@ function initMap(id) {
   });
 }
 
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 function openMenu() {
   const links = document.getElementById("links");
   const cross = document.getElementById("cross");
@@ -424,6 +465,8 @@ function openMenu() {
   cross.classList.toggle("active");
   links.classList.toggle("active");
 }
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 function addTrainers() {
   const container = document.getElementById("addTrainers");
@@ -435,9 +478,13 @@ function addTrainers() {
   }
 }
 
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 function openOptions(el) {
   el.classList.toggle("active");
 }
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 function changeDirection(el) {
   // console.log("@@@@@@@@ ", el.innerText);
@@ -449,6 +496,8 @@ function changeDirection(el) {
   const title = document.getElementById("directionsSelectBtn");
   title.innerText = el.innerText;
 }
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 function openModal(state, event) {
   if (state === "open") {
@@ -470,6 +519,8 @@ function openModal(state, event) {
   }
 }
 
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 function lazyLoad() {
   function loaded(div, img) {
     div.classList.toggle("blur-[2px]");
@@ -487,6 +538,8 @@ function lazyLoad() {
     }
   });
 }
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 // function generateModal(state) {
 //   if (state === "open") {
@@ -528,10 +581,35 @@ function lazyLoad() {
 //   }
 // }
 
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function addCarouselImages() {
+  const container = document.getElementById("generateCarousel");
+  if (!container) return;
+  const images = container.getElementsByClassName("image");
+  for (let i = 0; i < 16; i++) {
+    const newOne = images[0].cloneNode(true);
+    container.appendChild(newOne);
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function debounce(fn, ms) {
+  let timer;
+  return function () {
+    clearTimeout(timer);
+    timer = setTimeout(fn, ms);
+  };
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 document.addEventListener("DOMContentLoaded", function (event) {
+  // addCarouselImages();
   carousel("mainCarousel");
-  carouselSingle("carouselMainLeselidze", 5000);
-  carouselSingleArrows("carouselSingleArrowsGallery", 5000);
+  carouselSingle("carouselMainLeselidze");
+  carouselSingleArrows("carouselSingleArrowsGallery");
   ymaps.ready(() => initMap("mapLenina"));
   ymaps.ready(() => initMap("mapLeselidze"));
   addTrainers();

@@ -53,7 +53,10 @@
                 class="rounded-[50px] uppercase flex max-lg:flex-col max-lg:items-center justify-center gap-10 bg-dark text-font1 lg:py-[70px] text-center mb-20 lg:px-[105px]">
                 <div class="bg-extraLight w-full lg:size-fit rounded-[50px] p-[10px]">
                     <div
-                        class="rounded-[40px] w-full lg:w-[360px] h-[420px] bg-personalCardInnerBg bg-[url(./assets/photos/4.png)] bg-center bg-cover">
+                        class="rounded-[40px] w-full lg:w-[360px] h-[420px] bg-personalCardInnerBg bg-center bg-cover relative">
+                        <div class="lazy-load blur-[2px]" style="background-image: url(./assets/photos/4-min.webp);">
+                            <img src="./assets/photos/4.png" alt="gym1" class="opacity-0" loading="lazy">
+                        </div>
                     </div>
                 </div>
                 <div class="text-left w-full px-5">

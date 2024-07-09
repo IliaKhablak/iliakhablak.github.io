@@ -39,9 +39,9 @@ module.exports = {
         mainBasicsGym4Min: "url('./assets/main-basics-4-min.jpg')",
         directionsBg1: "url('./assets/directions1-min.jpg')",
         cardioBg1: "url('./assets/cardio1-min.jpg')",
-        galleryBg1: "url('./assets/gallery1.png')",
+        galleryBg1: "url('./assets/gallery1-min.jpg')",
         crossBg: "url('./assets/icons/cross.svg')",
-        priceBg1: "url('./assets/priceBg1.png')",
+        priceBg1: "url('./assets/priceBg1-min.jpg')",
       },
       fontFamily: {
         euro: ["Eurofontextendedc"],

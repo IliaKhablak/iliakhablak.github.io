@@ -316,10 +316,10 @@ footer {
   & .carousel {
     @apply w-full lg:w-[900px] h-[330px] lg:h-[600px] relative max-xl:order-1 max-xl:col-span-2 max-xl:justify-self-center;
     & .dots {
-      @apply absolute bottom-4 left-1/2 -translate-x-1/2  flex gap-2;
+      @apply absolute bottom-4 left-1/2 -translate-x-1/2  flex justify-start h-[10px] gap-2 max-w-[265px] overflow-hidden;
     }
     & .dot {
-      @apply transition duration-300 size-[10px] bg-light rounded-full cursor-pointer;
+      @apply transition duration-300 size-[10px] bg-light rounded-full cursor-pointer shrink-0;
       &.active {
         @apply transition duration-300 bg-font2;
       }
@@ -365,10 +365,10 @@ input::placeholder {
 .carouselSingleContainer {
   @apply relative;
   & .dots {
-    @apply absolute bottom-4 left-1/2 -translate-x-1/2  flex gap-2;
+    @apply absolute bottom-4 left-1/2 -translate-x-1/2  flex gap-2 max-w-[265px] overflow-hidden justify-start;
   }
   & .dot {
-    @apply transition duration-300 size-[10px] bg-light rounded-full cursor-pointer;
+    @apply transition duration-300 size-[10px] bg-light rounded-full cursor-pointer shrink-0;
     &.active {
       @apply transition duration-300 bg-font2;
     }
@@ -475,5 +475,23 @@ input::placeholder {
   @apply transition duration-300 absolute top-0 left-0 size-full rounded-[50px] overflow-hidden bg-center bg-cover;
   & img {
     @apply transition duration-300 size-full object-cover object-center;
+  }
+}
+
+@keyframes slideLogo {
+  0% {
+    @apply left-1/2 -translate-x-1/2;
+  }
+  100% {
+    @apply left-0;
+  }
+}
+
+@keyframes slideLogoReverse {
+  0% {
+    @apply left-0 translate-x-0;
+  }
+  100% {
+    @apply left-1/2 -translate-x-1/2;
   }
 }

@@ -57,8 +57,10 @@
                         class="transition duration-300 pillBtn bg-font2 text-dark border-2 border-font2 hover:bg-dark hover:text-font2 text16 lg:text18 font-bold">Получить
                         бесплатное занятие</button>
                 </div>
-                <div
-                    class=" w-full lg:w-[655px] h-[330px] lg:h-[440px] rounded-[42px] bg-galleryBg1 bg-cover bg-center">
+                <div class=" w-full lg:w-[655px] h-[330px] lg:h-[440px] rounded-[42px] relative">
+                    <div class=" bg-galleryBg1 lazy-load blur-[2px]">
+                        <img src="./assets/gallery1.png" alt="gym1" class="opacity-0" loading="lazy">
+                    </div>
                 </div>
             </div>
 
@@ -74,11 +76,27 @@
                     <button class="prev">
                         <img src="./assets/icons/arrow.svg" alt="arrow" />
                     </button>
-                    <div class="carousel">
-                        <div class="image active bg-mainBasicsGym1"> </div>
-                        <div class="image bg-mainBasicsGym2"> </div>
-                        <div class="image bg-mainBasicsGym3"> </div>
-                        <div class="image bg-mainBasicsGym4"> </div>
+                    <div class="carousel" id="generateCarousel">
+                        <div class="image active">
+                            <div class=" bg-mainBasicsGym1Min lazy-load blur-[2px]">
+                                <img src="./assets/main-basics-1.png" alt="gym1" class="opacity-0" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="image">
+                            <div class=" bg-mainBasicsGym2Min lazy-load blur-[2px]">
+                                <img src="./assets/main-basics-2.png" alt="gym1" class="opacity-0" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="image ">
+                            <div class=" bg-mainBasicsGym3Min lazy-load blur-[2px]">
+                                <img src="./assets/main-basics-3.png" alt="gym1" class="opacity-0" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="image ">
+                            <div class=" bg-mainBasicsGym4Min lazy-load blur-[2px]">
+                                <img src="./assets/main-basics-4.png" alt="gym1" class="opacity-0" loading="lazy">
+                            </div>
+                        </div>
                     </div>
                     <button class="next">
                         <img src="./assets/icons/arrow.svg" alt="arrow" class="rotate-180" />
