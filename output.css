@@ -3215,6 +3215,14 @@ main {
 
 nav {
   height: 2.5rem;
+  &.active {
+    & .cross {
+      position: fixed;
+    }
+    & .cross {
+      right: 0.5rem;
+    }
+  }
   & .links {
     z-index: 30;
   }

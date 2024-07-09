@@ -52,6 +52,11 @@ main {
 
 nav {
   @apply h-10;
+  &.active {
+    & .cross {
+      @apply fixed right-2;
+    }
+  }
   & .links {
     @apply uppercase font-play font-bold lg:text14 z-30 max-lg:h-[0vh] max-lg:top-0 max-lg:left-0 max-lg:flex-col max-lg:items-end max-lg:justify-end max-lg:text20 max-lg:absolute max-lg:w-full max-lg:bg-mainBg max-lg:overflow-hidden flex lg:items-center gap-6;
     transition: height 0.5s ease-in-out;
