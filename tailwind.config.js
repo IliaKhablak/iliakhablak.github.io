@@ -104,6 +104,10 @@ module.exports = {
           lineHeight: "18px",
           fontSize: "18px",
         },
+        ".text17": {
+          lineHeight: "17px",
+          fontSize: "17px",
+        },
         ".text16": {
           lineHeight: "16px",
           fontSize: "16px",

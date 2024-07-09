@@ -102,7 +102,7 @@ footer {
 }
 
 .pillBtn {
-  @apply py-[30px] px-[30px] rounded-[50px] uppercase w-fit max-md:font-play;
+  @apply py-[22px] lg:py-[30px] px-[30px] rounded-[50px] uppercase w-fit block;
 }
 
 .cross {
@@ -300,7 +300,7 @@ footer {
 }
 
 .carouselSingleArrows {
-  @apply w-screen xl:w-full max-xl:ml-[-15px] overflow-hidden grid max-xl:grid-cols-2 xl:grid-flow-col gap-5 items-center xl:justify-center mx-auto mt-[60px];
+  @apply w-screen xl:w-full max-xl:ml-[-15px] overflow-hidden grid max-xl:grid-cols-2 xl:grid-flow-col gap-5 items-center xl:justify-center mx-auto mt-[30px] lg:mt-[60px];
   & button {
     @apply bg-dark flex items-center justify-center size-10 rounded-full;
     &:active {
@@ -314,7 +314,7 @@ footer {
     @apply max-xl:order-3 max-xl:col-span-1 max-xl:justify-self-start;
   }
   & .carousel {
-    @apply w-full lg:w-[900px] h-[330px] lg:h-[600px] relative max-xl:order-1 max-xl:col-span-2 max-xl:justify-self-center;
+    @apply w-full md:w-[900px] h-[330px] md:h-[600px] relative max-xl:order-1 max-xl:col-span-2 max-xl:justify-self-center;
     & .dots {
       @apply absolute bottom-4 left-1/2 -translate-x-1/2  flex justify-start h-[10px] gap-2 max-w-[265px] overflow-hidden;
     }
@@ -325,7 +325,10 @@ footer {
       }
     }
     & .image {
-      @apply transition duration-300 absolute top-0 left-0 opacity-0 w-full lg:w-[900px] h-[330px] lg:h-[600px] bg-cover bg-center lg:rounded-[42px];
+      @apply transition duration-300 absolute top-0 left-0 opacity-0 w-full md:w-[900px] h-[330px] md:h-[600px] bg-cover bg-center lg:rounded-[42px];
+      & .lazy-load {
+        @apply max-lg:rounded-none;
+      }
       &.active {
         @apply transition duration-300 opacity-100;
       }
@@ -341,7 +344,7 @@ footer {
       @apply font-bold text28 lg:text50 mb-[30px] text-mainBg;
     }
     & p {
-      @apply text20 text-font2 max-lg:font-bold;
+      @apply text15 lg:text20 text-font2 max-lg:font-bold;
     }
   }
   & .form {
@@ -447,8 +450,8 @@ input::placeholder {
         @apply font-bold text-white text20 md:text40 text-center z-20;
       }
     }
-    & .cross {
-      @apply absolute top-[30px] right-[30px] bg-crossBg size-5 bg-cover bg-center z-30;
+    & .crossModal {
+      @apply absolute top-[30px] right-[30px] bg-crossBg size-5 shrink-0 bg-cover bg-center z-30;
     }
   }
   &.active {
@@ -457,7 +460,7 @@ input::placeholder {
 }
 
 .contactsCard {
-  @apply w-full lg:w-[575px] h-fit lg:h-[500px] rounded-[50px] border-2 border-font2 pt-[60px] pb-5 px-[37px];
+  @apply w-full lg:w-[575px] h-fit lg:h-[500px] rounded-[50px] border-2 border-font2 pt-[60px] pb-5 px-[25px] lg:px-[37px];
   &.active {
     @apply border-none bg-light;
   }

@@ -50,30 +50,31 @@
             <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ FIRST BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
             <div
-                class="rounded-[50px] uppercase flex items-center justify-center lg:justify-start text-font1 py-[115px] px-[105px]  relative">
-                <div class="rounded-[50px] absolute top-0 left-0 bg-gym1 size-full z-10  bg-center bg-cover opacity-70">
-                    <div class=" bg-gymMin1 lazy-load blur-[2px]">
-                        <img src="./assets/gym1.jpg" alt="gym1" class="opacity-0" loading="lazy">
-                    </div>
-                </div>
-                <div class=" rounded-[50px] absolute top-0 left-0 bg-black/60 size-full z-20"></div>
+                class="max-lg:pt-[77px] rounded-[50px] uppercase max-lg:bg-dark max-lg:p-[10px] flex max-lg:flex-col gap-10 items-center justify-center lg:justify-start text-font1 py-[115px] px-[105px]  relative">
+                <div class=" rounded-[50px] absolute top-0 left-0 bg-black/60 size-full z-20 max-lg:hidden"></div>
                 <h1 class="font-bold text28 lg:text50 z-20 max-lg:text-center">наши <br> <span
                         class="text-font2">контакты</span></h1>
+                <div
+                    class="rounded-[50px] max-lg:h-[310px] relative lg:absolute bottom-0 lg:top-0 left-0 bg-gym1 size-full z-10  bg-center bg-cover opacity-70">
+                    <div class=" bg-gymMin1 lazy-load blur-[2px]">
+                        <img src="./assets/gym1.jpg" alt="gym1" class="opacity-0 " loading="lazy">
+                    </div>
+                </div>
             </div>
 
             <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ SECOND BLOCK @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-            <div class="py-20 flex flex-wrap gap-[10px] justify-center uppercase font-bold text-dark">
+            <div class="py-10 lg:py-20 flex flex-wrap gap-[10px] justify-center uppercase font-bold text-dark">
                 <div class="contactsCard active group/main">
-                    <h1 class="text20 lg:text40 mb-5">клуб <br>
+                    <h1 class="text26 lg:text40 mb-5">клуб <br>
                         <span class="text-cardBg">НА ЛЕНИНА, 30</span>
                     </h1>
-                    <div class="h-[1px] w-full bg-cardBg mb-[30px]"></div>
-                    <h1 class="text18  lg:text30 mb-5">время работы</h1>
-                    <p class="text19 font-play ">Пн-Пт: с 07:00 до 23:00</p>
-                    <p class="text19 font-play mb-[30px]">Сб-Вс: с 08:00 до 22:00</p>
-                    <div class="h-[1px] w-full bg-cardBg mb-[30px]"></div>
-                    <a href="tel:8(938)4111333" class="text18 lg:text30 text-cardBg ">8 (938) 411 13 33</a>
+                    <div class="h-[2px] lg:h-[1px] w-full bg-cardBg mb-[30px]"></div>
+                    <h1 class="text20  lg:text30 mb-5">время работы</h1>
+                    <p class="text17 lg:text19 font-play ">Пн-Пт: с 07:00 до 23:00</p>
+                    <p class="text17 lg:text19 font-play mb-[30px]">Сб-Вс: с 08:00 до 22:00</p>
+                    <div class="h-[2px] lg:h-[1px] w-full bg-cardBg mb-[30px]"></div>
+                    <a href="tel:8(938)4111333" class="text20 lg:text30 text-cardBg ">8 (938) 411 13 33</a>
                     <div class="flex gap-3 mb-5 mt-[30px] cursor-pointer">
                         <svg class="group" width="38" height="38" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -103,15 +104,15 @@
                     </div>
                 </div>
                 <div class="contactsCard  group/main">
-                    <h1 class="text20 lg:text40 mb-5">клуб <br>
+                    <h1 class="text26 lg:text40 mb-5">клуб <br class="max-lg:hidden">
                         <span class="text-cardBg">НА ЛЕСЕЛИДЗЕ, 7</span>
                     </h1>
-                    <div class="h-[1px] w-full bg-cardBg mb-[30px]"></div>
-                    <h1 class="text18 lg:text30 mb-5">время работы</h1>
-                    <p class="text19 font-play ">Ежедневно: </p>
-                    <p class="text19 font-play mb-[30px]">с 08:00 до 22:00</p>
-                    <div class="h-[1px] w-full bg-cardBg mb-[30px]"></div>
-                    <a href="tel:8(938)5227733" class="text18 lg:text30 text-cardBg ">8 (938) 522 77 33</a>
+                    <div class="h-[2px] lg:h-[1px] w-full bg-cardBg mb-[30px]"></div>
+                    <h1 class="text20 lg:text30 mb-5">время работы</h1>
+                    <p class="text17 lg:text19 font-play ">Ежедневно: </p>
+                    <p class="text17 lg:text19 font-play mb-[30px]">с 08:00 до 22:00</p>
+                    <div class="h-[2px] lg:h-[1px] w-full bg-cardBg mb-[30px]"></div>
+                    <a href="tel:8(938)5227733" class="text20 lg:text30 text-cardBg ">8 (938) 522 77 33</a>
                     <div class="flex gap-3 mb-5 mt-[30px] cursor-pointer">
                         <svg class="group" width="38" height="38" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -283,7 +284,7 @@
 
     <div class="modal close" id="modal" onclick="openModal('close', arguments[0])">
         <div class="content">
-            <button class="close cross">
+            <button class="close crossModal">
             </button>
             <div class="image">
                 <div class="imageInner ">
